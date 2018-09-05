@@ -1,0 +1,107 @@
+.about-list-section {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.83;
+        background-image: linear-gradient(114deg, rgba(0, 0, 0, 0.98), rgba(0, 0, 0, 0.63));
+        z-index: 0;
+    }
+}
+
+.about-lists-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media(--tablet) {
+        flex-direction: row;
+    }
+}
+
+.about-lists {
+    width: 100%;
+    max-width: 774px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-list-item {
+    width: 100%;
+    position: relative;
+    padding-left: 20px;
+    margin: 0 0 10px 0;
+
+    @media(--tablet) {
+        padding-left: 20px;
+        margin: 0 30px 30px 0;
+    }
+
+    @media(min-width: 880px) {
+        width: calc(50% - 100px);
+        padding-left: 40px;
+        position: relative;
+        margin: 0 60px 60px 0;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        background-color: var(--green);
+        position: absolute;
+        top: 5px;
+        left: 0;
+    }
+}
+
+.about-list-heading {
+    font-family: var(--roboto);
+    font-size: 20px;
+    color: var(--white);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.about-list-text {
+    font-family: var(--roboto);
+    font-size: 16px;
+    color: var(--lightTextGrey);
+    display: block;
+    line-height: 1.63;
+    margin-bottom: 20px;
+    margin: 0;
+}
+
+.about-section-intro {
+    width: 100%;
+    margin-bottom: 40px;
+
+    @media(--tablet) {
+        width: 40%;
+        margin-bottom: 0;
+    }
+
+    .heading-container {
+        margin: 0;
+        padding: 0 0 20px 0;
+        width: 100%;
+    }
+}

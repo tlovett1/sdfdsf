@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c8d60a4b2a50b9368d5c4eb4c6f040c",
+    "content-hash": "9c5eae414e67d5fb4f697d034fe0d56c",
     "packages": [
         {
             "name": "aaronholbrook/autoload",
@@ -45,6 +45,36 @@
             ],
             "description": "Automatically and recursively require_once all files in a directory.",
             "time": "2016-05-23 21:24:36"
+        },
+        {
+            "name": "customizer-repeater",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrbobbybryant/customizer-repeater.git",
+                "reference": "66628fd8e08fd8e7ce234c83147a3cf927c15fae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrbobbybryant/customizer-repeater/zipball/66628fd8e08fd8e7ce234c83147a3cf927c15fae",
+                "reference": "66628fd8e08fd8e7ce234c83147a3cf927c15fae",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "customizer-repeater.php"
+                ]
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "A Custom Repeater Field for the WordPress Customizer.",
+            "homepage": "https://github.com/mrbobbybryant/customizer-repeater",
+            "support": {
+                "source": "https://github.com/mrbobbybryant/customizer-repeater/tree/v0.6.0"
+            },
+            "time": "2018-05-01T23:12:56+00:00"
         },
         {
             "name": "developwithwp/customizer-curation",

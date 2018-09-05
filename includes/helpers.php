@@ -76,20 +76,20 @@ function value_exists( $values, $key = '' ) {
  * @param [string] $headingId  is the id of the element.
  * @return HTML returns the markup for the Heading Section.
  */
-function heading( $subHeading, $heading, $subHeadingId, $headingId ) {
+function heading( $subHeading, $heading, $subHeadingId, $headingId, $class = '' ) {
 
 	ob_start(); ?>
 		<?php
 			if ( value_exists( $subHeading, 'subheading' ) ) :
 		?>
-			<span id="<?php echo esc_attr( $subHeadingId ); ?>" class="subheading">
+			<span id="<?php echo esc_attr( $subHeadingId ); ?>" class="subheading <?php echo esc_attr( $class );?>" >
 				<?php echo esc_html( $subHeading ); ?>
 			</span>
 		<?php endif; ?>
 		<?php
 			if ( value_exists( $heading, 'heading' ) ) :
 		?>
-			<h3 id="<?php echo esc_attr( $headingId ); ?>" class="heading">
+			<h3 id="<?php echo esc_attr( $headingId ); ?>" class="heading  <?php echo esc_attr( $class );?>">
 				<?php echo esc_html( $heading ); ?>
 			</h3>
 		<?php endif; ?>

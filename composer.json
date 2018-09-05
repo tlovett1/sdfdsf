@@ -14,13 +14,18 @@
       {
 			  "type": "vcs",
 			  "url": "https://github.com/mrbobbybryant/omg-fields"
+      },
+      {
+        "type": "vcs",
+        "url": "https://github.com/mrbobbybryant/customizer-repeater"
       }
     ],
     "require": {
       "php": ">=5.6",
       "aaronholbrook/autoload": "dev-master",
       "omg-fields": "0.12.0",
-      "developwithwp/customizer-curation": "0.8.*"
+      "developwithwp/customizer-curation": "0.8.*",
+      "customizer-repeater": "0.6.0"
     },
     "require-dev": {}
   }

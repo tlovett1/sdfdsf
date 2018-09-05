@@ -20,7 +20,7 @@ function about_setup() {
 	add_action( 'customize_register', __NAMESPACE__ . '\about_panel' );
 	add_action( 'customize_register', __NAMESPACE__ . '\about_intro' );
 	// add_action( 'customize_register', __NAMESPACE__ . '\about_stats' );
-	// add_action( 'customize_register', __NAMESPACE__ . '\about_list' );
+	add_action( 'customize_register', __NAMESPACE__ . '\about_list' );
 }
 
 /**
@@ -81,3 +81,60 @@ function about_intro( WP_Customize_Manager $manager  ) {
 	]);
 }
 
+/**
+ * Creates about page settings and controls for the about lists.
+ *
+ * @param WP_Customize_Manager $manager Customizer Class Instance.
+ * @return void
+ */
+function about_list( WP_Customize_Manager $manager  ) {
+	$manager->add_section( 'about_list_section', [
+		'title' => esc_html__( 'About Lists', 'atu' ),
+		'panel' => ABOUT_PANEL,
+	]);
+
+	$manager->add_setting( 'about_lists_settings[subheading]', [
+		'type'      => 'theme_mod',
+		'transport' => 'postMessage',
+	]);
+
+	$manager->add_control( 'about_lists_settings[subheading]', [
+		'label'   => esc_html__( 'Sub Heading', 'atu' ),
+		'section' => 'about_list_section',
+		'type'    => 'text',
+	]);
+
+	$manager->add_setting( 'about_lists_settings[heading]', [
+		'type'      => 'theme_mod',
+		'transport' => 'postMessage',
+	]);
+
+	$manager->add_control( 'about_lists_settings[heading]', [
+		'label'   => esc_html__( 'Heading', 'atu' ),
+		'section' => 'about_list_section',
+		'type'    => 'text',
+	]);
+
+	$manager->add_setting( 'about_lists_settings_repeater', array(
+        'sanitize_callback' => 'customizer_repeater_sanitize'
+    ));
+
+    $manager->add_control( new Customizer_Repeater( $manager, 'about_lists_settings_repeater', array(
+        'label'   => esc_html__( 'About List','atu' ),
+        'section' => 'about_list_section',
+        'controls' => [
+            [
+                'type'  =>  'text',
+                'label' =>  esc_html__( 'Heading', 'atu' ),
+                'id'    =>  'heading'
+			],
+			[
+                'type'  =>  'text',
+                'label' =>  esc_html__( 'Text', 'atu' ),
+                'id'    =>  'text'
+            ],
+        ]
+    ) ) );
+
+
+}

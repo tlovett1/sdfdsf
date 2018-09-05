@@ -4,7 +4,7 @@
  *
  * @package atu-theme
  */
-
+use ATU\Theme\Helpers;
 
 
 get_header()?>
@@ -15,10 +15,16 @@ get_header()?>
 		</div>
 		<!-- ABOUT SECTION -->
 		<div id="about" class="section about-container">
-			<div class="triangle"></div>
+			<!-- <div class="triangle"></div> -->
 			<?php
 			echo get_template_part( 'partials/about', 'intro' );
 			?>
+			<div class="about-list-section section"  style="background-image:url(https://placeimg.com/343/537/arch)">
+				<div class="about-lists-container container">
+					<?php echo get_template_part( 'partials/about', 'lists' ); ?>
+				</div>
+
+			</div>
 		</div>
 		<!-- ABOUT SECTION -->
 		

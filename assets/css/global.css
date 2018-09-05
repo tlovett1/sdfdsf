@@ -110,6 +110,10 @@ body {
         }
     }
 
+    &.white {
+        color: var(--white);
+    }
+
     @media(--tablet) {
         font-size: 45px;
     }
@@ -130,6 +134,10 @@ body {
         margin-bottom: 10px;
         display: block;
     }
+
+    &.white {
+        color: var(--white);
+    }
 }
 
 .text {
@@ -148,7 +156,7 @@ body {
 
 .button {
     appearance: none;
-    padding: 17px 20px;
+    padding: 14px 20px;
     background-color: transparent;
     display: block;
     border: 2px solid var(--green);

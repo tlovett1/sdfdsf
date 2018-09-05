@@ -1,0 +1,14 @@
+<svg viewBox="0 0 141 141" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none">
+        <g transform="translate(-648.000000, -1662.000000)" stroke="#81C343">
+            <g transform="translate(-12.000000, 1595.000000)">
+                <g transform="translate(663.000000, 70.000000)">
+                    <g >
+                        <circle stroke-width="5" cx="67.5" cy="67.5" r="67.5"></circle>
+                        <path d="M67.5,125 C99.2563731,125 125,99.2563731 125,67.5 C125,35.7436269 99.2563731,10 67.5,10 C35.7436269,10 10,35.7436269 10,67.5 C10,99.2563731 35.7436269,125 67.5,125 Z" stroke-dasharray="5"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
