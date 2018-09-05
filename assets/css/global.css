@@ -23,7 +23,7 @@ body {
         margin-top: 0 !important;
     }
  }
- 
+
  .container {
      padding: 0 20px;
 
@@ -61,6 +61,24 @@ body {
 
     @media(--tablet) {
         width: 30%;
+        padding: 40px 0 70px 30px;
+    }
+
+    &--image {
+        width: auto;
+        padding: 40px 0 40px 30px;
+
+        img {
+            max-width: 220px;
+            width: 100%;
+            display: block;
+            margin-top: 10px;
+
+            @media(--tablet) {
+                max-width: 400px;
+                margin-top: 20px;
+            }
+        }
     }
 
     &:before,
@@ -80,10 +98,6 @@ body {
 
     &:after {
         bottom: 0;
-    }
-
-    @media(--tablet) {
-        padding: 40px 0 70px 30px;
     }
 }
 

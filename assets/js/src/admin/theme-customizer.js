@@ -16,4 +16,14 @@ export default () => {
   );
   bindCustomizerValue('about_intro_settings[heading]', '#aboutIntroHeading');
   bindCustomizerValue('about_intro_settings[text]', '#aboutIntroText');
+  bindCustomizerValue(
+    'about_lists_settings[subheading]',
+    '#aboutListsSubHeading',
+  );
+  bindCustomizerValue('about_lists_settings[heading]', '#aboutListsHeading');
+  bindCustomizerValue(
+    'events_intro_settings[subheading]',
+    '#eventsIntroSubHeading',
+  );
+  bindCustomizerValue('events_intro_settings[text]', '#eventsIntroText');
 };

@@ -39,6 +39,7 @@ if ( file_exists( ATU_PATH . 'vendor/autoload.php' ) ) {
 	Metaboxes\partners_setup();
 	Customizer\setup();
 	Customizer\about_setup();
+	Customizer\events_setup();
 	Customizer\social_page_setup();
 	Customizer\footer_setup();
 }

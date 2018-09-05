@@ -76,8 +76,7 @@ function value_exists( $values, $key = '' ) {
  * @param [string] $headingId  is the id of the element.
  * @return HTML returns the markup for the Heading Section.
  */
-function heading( $subHeading, $heading, $subHeadingId, $headingId, $class = '' ) {
-
+function heading( $subHeading, $heading, $subHeadingId, $headingId, $class = '', $image = false ) {
 	ob_start(); ?>
 		<?php
 			if ( value_exists( $subHeading, 'subheading' ) ) :
@@ -92,6 +91,12 @@ function heading( $subHeading, $heading, $subHeadingId, $headingId, $class = '' 
 			<h3 id="<?php echo esc_attr( $headingId ); ?>" class="heading  <?php echo esc_attr( $class );?>">
 				<?php echo esc_html( $heading ); ?>
 			</h3>
+		<?php endif; ?>
+		<?php
+			if ( value_exists( $image, 'image' ) ) :
+				$url = wp_get_attachment_image_src( $image, 'full' )[0];
+		?>
+			<img src="<?php echo esc_html( $url ); ?>" alt="<?php echo esc_html( $subHeading ); ?>">
 		<?php endif; ?>
 
 	<?php return ob_get_clean();

@@ -5,6 +5,7 @@
  * @package atu-theme
  */
 use ATU\Theme\Helpers;
+use ATU\Theme\Views;
 
 
 get_header()?>
@@ -27,7 +28,15 @@ get_header()?>
 			</div>
 		</div>
 		<!-- ABOUT SECTION -->
-		
+		<!-- EVENT SECTION -->
+		<div id="events" class="section events-container">
+		<?php
+			echo get_template_part( 'partials/events', 'intro' );
+			echo Views\build_events_intro_list();
+			echo Helpers\button( 'Apply', '', 'test')
+		?>
+		</div>
+		<!-- EVENT SECTION -->
 	</main>
 <?php endif; ?>
 <?php get_footer(); ?>
