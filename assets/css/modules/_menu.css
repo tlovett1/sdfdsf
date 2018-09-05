@@ -1,0 +1,240 @@
+.menu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-direction: column;
+
+    @media(--tablet) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.menu-header-left-menu-container {
+    opacity: 0;
+    height: 0;
+    position: relative;
+    z-index: -1;
+    pointer-events: none;
+
+    .menu-open & {
+        opacity: 1;
+        order: 3;
+        height: auto;
+        pointer-events: inherit;
+        margin-top: 30px;
+
+        @media(--tablet) {
+            order: 1;
+            margin-top: 0;
+        }
+    }
+
+    @media(--tablet) {
+        display: block;
+        opacity: 1;
+        height: auto;
+        z-index: 1;
+        pointer-events: inherit;
+    }
+}
+
+.menu-header-right-menu-container {
+    opacity: 0;
+    height: 0;
+    pointer-events: none;
+
+    .menu-open & {
+        opacity: 1;
+        order: 4;
+        height: auto;
+        pointer-events: inherit;
+
+        @media(--tablet) {
+            order: 2;
+        }
+    }
+
+    @media(--tablet) {
+        display: block;
+        opacity: 1;
+        height: auto;
+        z-index: 1;
+        pointer-events: inherit;
+    }
+}
+
+.menu-item {
+    display: inline-block;
+
+    a { 
+        color: var(--white);
+        font-family: var(--condensed);
+        font-size: 16px;
+        font-weight: 400;
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: left;
+        position: relative;
+        margin: 15px 20px;
+        padding: 0 4px  3px 4px;
+        transition: padding 0.25s;
+
+        @media(--tablet) {
+            text-align: center;
+            padding: 5px 20px;
+            margin: 0;
+            display: block;
+            font-size: 14px;
+        }
+
+        @media(min-width: 950px) {
+            padding: 5px 40px;
+        }
+
+        &:after {
+            content: '';
+            height: 0;
+            background-color: var(--green);
+            width: 100%;
+            display: block;
+            transition: height 0.25s;
+            z-index: -1;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        &:hover {
+            &:after {
+                height: 10px;
+            }
+        }
+    }
+}
+
+.apply-button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    @media(--tablet) {
+        position: relative;
+        bottom: auto;
+        width: auto;
+    }
+
+    a {
+        background-color: var(--green);
+        color: var(--white);
+        transition: background-color 0.25s,  color 0.25s;
+        margin: 0;
+        display: block;
+        padding: 16px 20px;
+        text-align: center;
+
+        @media(--tablet) {
+            padding: 15px 38px;
+            border: 2px solid var(--green);
+            color: var(--green);
+            background-color: transparent;
+        }
+
+        &:hover {
+            background-color: var(--white);
+            color: var(--green);
+
+            @media(--tablet) {
+                background-color: var(--green);
+                color: var(--white)
+    
+            }
+        }
+
+        &:after{
+            display: none;
+        }
+    }
+}
+
+.menu-button {
+    padding: 0 0 0 0;
+    border: none;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    background-color: transparent;
+    appearance: none;
+    position: absolute;
+    left: 20px;
+    top: 26px;
+
+    .menu-open & {
+        order: 1;
+        top: 20px;
+        transform: none;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    @media(--tablet) {
+        display: none;
+    }
+
+    span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: var(--white);
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+        top: 9px;
+
+        &:first-child {
+            top: 0px;
+        }
+
+        &:last-child {
+            top: 17px;
+        }
+    }
+
+    &.disabled {
+        pointer-events: none;
+    }
+
+    &:after {
+        display: none;
+    }
+}
+
+.menu-button span {
+
+    .menu-open & {
+        transform: rotate(45deg);
+
+        &:first-child {
+            width: 0%;
+            left: 50%;
+            top: 18px;
+            transform: none;
+        }
+
+        &:last-child {
+            top: 9px;
+            left: 50%;
+            transform: rotate(-45deg);
+            left: 0;
+        }
+    }
+}

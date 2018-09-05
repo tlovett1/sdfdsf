@@ -1,5 +1,5 @@
 {
-  "name": "atu theme",
+  "name": "atu_theme",
   "title": "atu",
   "description": "The Best place to learn WordPress Development",
   "version": "0.1.0",
@@ -45,9 +45,11 @@
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.23.0",
     "compression-webpack-plugin": "^0.4.0",
+    "gumshoejs": "github:cferdinandi/gumshoe",
     "normalize.css": "^5.0.0",
     "postcss-nested": "^1.0.0",
+    "smooth-scroll": "^14.2.1",
     "url-loader": "^0.5.8",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.4"
   }
 }

@@ -1,2 +1,15 @@
 /* External Libraries */
 @import 'normalize.css';
+
+@import './global.css';
+@import './colors.css';
+@import './media-queries.css';
+@import './font-family.css';
+@import './header.css';
+@import './footer.css';
+/* @import './footer.css'; */
+
+/* Modules */
+@import './modules/_menu.css';
+@import './modules/_about.css';
+@import './modules/_hero.css';

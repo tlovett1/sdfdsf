@@ -10,7 +10,16 @@
  *
  * @package Develop With WP
  * @since 0.1.0
+ * 
+ * 
  */
+
+
+use ATU\Theme\Core;
+use ATU\Theme\Customizer;
+use ATU\Theme\Settings;
+use ATU\Theme\Metaboxes;
+
 
 // Useful global constants.
 define( 'ATU_VERSION', '1.0.0' );
@@ -23,7 +32,11 @@ if ( file_exists( ATU_PATH . 'vendor/autoload.php' ) ) {
 	require ATU_PATH . 'vendor/autoload.php';
 
 	\AaronHolbrook\Autoload\autoload( ATU_INC );
+	\AaronHolbrook\Autoload\autoload( ATU_PATH . 'views' );
 
 	// Run the setup functions.
-	atu\Theme\Core\setup();
+	ATU\Theme\Core\setup();
+	Customizer\setup();
+	Customizer\social_page_setup();
+	Customizer\footer_setup();
 }

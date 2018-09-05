@@ -1,0 +1,254 @@
+html,
+body {
+   padding:0;
+   -webkit-font-smoothing: antialiased;
+   width: 100%;
+}
+
+body {
+    min-height:100%;
+    position:relative;
+    font-family: var(--roboto);
+
+    @media(--phone) {
+        .modal-open &{
+             overflow: hidden;
+             position: fixed;
+        }
+    }
+ }
+
+ @media screen and (max-width: 782px) {
+    html[lang='en-us'] {
+        margin-top: 0 !important;
+    }
+ }
+ 
+ .container {
+     padding: 0 20px;
+
+     @media(--tablet) {
+        max-width: 1120px;
+        margin: 0 auto;
+     }
+}
+
+.section {
+    padding: 40px 0;
+
+    @media(--tablet) {
+        padding: 100px 0;
+    }
+}
+
+.heading-container {
+    width: 60%;
+    position: relative;
+    z-index: 1;
+
+    @media(--tablet) {
+        width: 30%;
+        margin-left: 100px;
+    }
+}
+
+.heading-container-border {
+    width: 100%;
+    border-left: 13px solid var(--green);
+    padding: 40px 0 30px 30px;
+    position: relative;
+    width: 60%;
+
+    @media(--tablet) {
+        width: 30%;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: var(--green);
+        width: 28px;
+        height: 13px;
+        left: 0;
+    }
+
+    &:before {
+        top: 0;
+    }
+
+    &:after {
+        bottom: 0;
+    }
+
+    @media(--tablet) {
+        padding: 40px 0 70px 30px;
+    }
+}
+
+.heading {
+    font-family: var(--condensed);
+    font-size: 38px;
+    font-weight: bold;
+    color: var(--darkGrey);
+    transition: font-size 0.25s;
+    margin: 0;
+    display: inline-block;
+    text-transform: uppercase;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-color: var(--green);
+
+        @media(--tablet) {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    @media(--tablet) {
+        font-size: 45px;
+    }
+}
+
+.subheading {
+    font-family: var(--roboto);
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--lightTextGrey);
+    transition: font-size 0.25s;
+    letter-spacing: 3.4px;
+    text-transform: uppercase;
+
+    @media(--tablet) {
+        font-size: 14px;
+        letter-spacing: 4px;
+        margin-bottom: 10px;
+        display: block;
+    }
+}
+
+.text {
+    padding: 10px 40px 20px 40px;
+    margin: 0;
+    font-family: var(--roboto);
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--lightTextGrey);
+
+    @media(--tablet) {
+        max-width: 464px;
+        padding: 26px 20px 20px 78px;
+    }
+}
+
+.button {
+    appearance: none;
+    padding: 17px 20px;
+    background-color: transparent;
+    display: block;
+    border: 2px solid var(--green);
+    position: relative;
+    cursor: pointer;
+    min-width: 200px;
+    transition: background-color 0.25s;
+
+    &:hover {
+        background-color: var(--green);
+
+        .button-text {
+            color: var(--white);
+        }
+    }
+
+    .button-corner {
+        display: block;
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        -webkit-transition: 0.3s 0.3s ease-in-out;
+        transition: 0.3s 0.3s ease-in-out;
+
+        &:after {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: var(--green);
+            content: '';
+        }
+    }
+
+    .button-text {
+        font-family: var(--condensed);
+        font-size: 14px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: var(--green);
+        transition: color 0.25s;
+    }
+
+    .button-corner--top-right {
+        top: -1px;
+        right: -1px;
+
+        &:after {
+            right: -2px;
+            top: -2px;
+        }
+    }
+
+    .button-corner--top-left {
+        top: -1px;
+        left: -1px;
+
+        &:after {
+            left: -2px;
+            top: -2px;
+        }
+    }
+
+    .button-corner--bottom-right {
+        bottom: -1px;
+        right: -1px;
+
+        &:after {
+            right: -2px;
+            bottom: -2px;
+        }
+    }
+
+    .button-corner--bottom-left {
+        bottom: -1px;
+        left: -1px;
+
+        &:after {
+            left: -2px;
+            bottom: -2px;
+        }
+    }
+}
+
+.hero {
+    height: 962px;
+}
+
+.triangle {
+    width: 0; 
+    height: 0; 
+    border-top: 350px solid transparent;
+    border-bottom: 350px solid transparent; 
+    border-right: 350px solid var(--darkGrey); 
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+
+    @media(max-width: 899px) {
+        display: none;
+    }
+}

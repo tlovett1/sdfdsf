@@ -1,0 +1,25 @@
+.about-container {
+    background-color: var(--backgroundGrey);
+    position: relative;
+
+    @media(--tablet) {
+        .heading-container {
+            padding: 40px 0 70px 30px;
+        }
+    
+        .text {
+            transform: translateY(-78px);
+            padding: 26px 20px 20px 78px;
+        }
+    }
+
+
+}
+
+.about-button {
+    margin: 0 auto;
+
+    @media(--tablet) {
+        margin: -78px 0 0 0;
+    }
+}

@@ -1,0 +1,118 @@
+.site-header {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    min-height: 70px;
+    transition: min-height 0.25s;
+
+    @nest .admin-bar & {
+        top: 46px;
+
+        @media (width >= 783px) {
+            top: 32px;
+        }
+    }
+
+    .menu-open & {
+        min-height: 100vh;
+
+        .admin-bar & {
+            top: 46px;
+            min-height: calc(100vh - 46px);
+        }
+    }
+
+    @media(--tablet) {
+        min-height: 80px;
+        justify-content: center;
+        align-items: center;
+
+        .menu-open & {
+            min-height: 80px;
+        }
+    }
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: var(--black);
+        top: 0;
+        left: 0;
+        opacity: 0.6;
+        z-index: 1;
+    }
+}
+
+.menu-open .admin-bar .site-header {
+
+    @media(--phone) {
+        min-height: calc(100vh - 46px);
+    }
+}
+
+.site-header-menu {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    .menu-open & {
+        align-items: flex-start;
+
+        @media(--tablet) {
+            align-items: center;
+        }
+    }
+
+    @media(--tablet) {
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+    }
+}
+
+.logo {
+    margin: 0 auto;
+    transform: translateY(20px);
+
+    .menu-open & {
+        order: 2;
+        transform: none;
+        margin-top: 20px;
+    }
+
+    @media(--tablet) {
+        margin: 0;
+        transform: translateY(20px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: auto;
+        transition: width 0.25s;
+    }
+
+
+    @media(min-width: 1050px) {
+        width: 200px;
+    }
+
+    @media(min-width: 1170px) {
+        width: 250px;
+    }
+
+    img {
+        width: 60px;
+        display: block;
+
+        @media(--tablet) {
+            width: 80px;
+        }
+    }
+}

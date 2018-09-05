@@ -1,0 +1,247 @@
+.footer {
+    background-color: var(--darkGrey);
+
+    .heading-container {
+        width: 25%;
+    }
+
+    .heading {
+        color: var(--white);
+    }
+
+    .subheading {
+        color: var(--white);
+    }
+}
+
+.footer-top {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top, #242424, rgba(36, 36, 36, 0.65));
+        bottom: 0;
+        z-index: 0;
+    }
+}
+
+.footer-background-image {
+    max-width: 980px;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center 40px;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+.footer-bottom {
+    padding: 30px;
+    border-top: 1px solid #464646;
+
+    @media(--tablet) {
+        padding: 54px 20px;
+    }
+}
+
+.footer-bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    @media(--tablet) {
+        flex-direction: row;
+    }
+}
+
+.footer-bottom-text-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media(--tablet) {
+        flex-direction: row;
+    }
+}
+
+.footer-copyright {
+    color: var(--white);
+    font-family: var(--roboto);
+    font-size: 16px;
+    line-height: 1.63;
+    color: var(--lightTextGrey);
+    margin-bottom: 10px;
+
+    @media(--tablet) {
+        margin-bottom: 0;
+    }
+}
+
+.footer-crossfield-link {
+    color: var(--white);
+    font-family: var(--roboto);
+    font-size: 16px;
+    line-height: 1.63;
+    color: var(--lightTextGrey);
+    text-decoration: none;
+}
+
+.social-icons {
+    margin-left: 26px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    @media(--tablet) {
+        margin-bottom: 0;
+    }
+}
+
+.social-label {
+    font-size: 16px;
+    line-height: 1.63;
+    font-family: var(--roboto);
+    color: var(--lightTextGrey);
+}
+
+.social-icons-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    display: flex;
+
+    li {
+        margin: 0 10px;
+    }
+
+    a {
+        display: block;
+
+        &:hover {
+            svg {
+                fill: var(--green);
+            }
+        }
+    }
+
+    svg {
+        fill: var(--backgroundGrey);
+        height: 20px;
+        transition: fill 0.25s;
+    }
+}
+
+.footer-slider-wrapper {
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+
+    @media(--tablet) {
+        margin-top: 100px;
+    }
+
+    .next,
+    .prev {
+        position: absolute;
+        top: 50%;
+        display: none !important;
+
+        @media(--tablet) {
+            display: block !important;
+        }
+    }
+
+    .prev {
+        transform: rotate(180deg) translateY(-50%);
+        cursor: pointer;
+        left: 0;
+        transform-origin: center top 0px;
+
+        svg {
+            width: 20px;
+            height: 32px;
+            fill: var(--green);
+        }
+    }
+
+    .next {
+        cursor: pointer;
+        transform:  translateY(-50%);
+        right: 0;
+
+        svg {
+            width: 20px;
+            height: 32px;
+            fill: var(--green);
+        }
+    }
+
+    .slick-dots {
+        display: flex !important;
+        list-style: none;
+        padding: 0;
+        margin: 40px 0 0 0;
+        justify-content: center;
+
+        @media(--tablet) {
+            display: none !important;
+        }
+
+        li {
+            button {
+                appearance: none;
+                font-size: 0;
+                background-color: var(--green);
+                opacity: 0.4;
+                width: 10px;
+                height: 10px;
+                display: block;
+                padding: 0;
+                border: none;
+                border-radius: 50%;
+                margin: 0 5px;
+            }
+        }
+    }
+
+    .slick-dots .slick-active {
+        button {
+            opacity: 1;
+        }
+    }
+}
+
+.footer-slider {
+    padding: 0;
+    margin: 0 auto;
+
+    @media(--tablet) {
+        padding: 0 50px;
+    }
+}
+
+
+.footer-slider-item {
+    margin: 0 10px;
+
+    @media(--tablet) {
+        width: 150px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}

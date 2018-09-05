@@ -1,0 +1,17 @@
+.hero {
+    img {
+        width: 100%;
+    }
+}
+
+.hero-image {
+    max-height: 961px;
+}
+
+.hero-image-container {
+    position: relative;
+}
+
+.hero-heading {
+    position: absolute;
+}
