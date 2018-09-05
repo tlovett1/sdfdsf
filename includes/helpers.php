@@ -66,3 +66,26 @@ function value_exists( $values, $key = '' ) {
 	return ! empty( $values );
 
 }
+
+
+function heading( $subHeading, $heading, $subHeadingId, $headingId ) {
+
+	ob_start(); ?>
+		<?php
+			if ( value_exists( $subHeading, 'subheading' ) ) :
+		?>
+			<span id="<?php echo esc_attr( $subHeadingId ); ?>" class="subheading">
+				<?php echo esc_html( $subHeading ); ?>
+			</span>
+		<?php endif; ?>
+		<?php
+			if ( value_exists( $heading, 'heading' ) ) :
+		?>
+			<h3 id="<?php echo esc_attr( $headingId ); ?>" class="heading">
+				<?php echo esc_html( $heading ); ?>
+			</h3>
+		<?php endif; ?>
+
+	<?php return ob_get_clean();
+
+}

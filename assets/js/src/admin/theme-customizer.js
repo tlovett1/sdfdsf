@@ -10,4 +10,10 @@ import { bindCustomizerValue } from './helpers';
 export default () => {
   bindCustomizerValue('footer_settings[subheading]', '#footerSubheading');
   bindCustomizerValue('footer_settings[heading]', '#footerHeading');
+  bindCustomizerValue(
+    'about_intro_settings[subheading]',
+    '#aboutIntroSubHeading',
+  );
+  bindCustomizerValue('about_intro_settings[heading]', '#aboutIntroHeading');
+  bindCustomizerValue('about_intro_settings[text]', '#aboutIntroText');
 };

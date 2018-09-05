@@ -16,28 +16,9 @@ get_header()?>
 		<!-- ABOUT SECTION -->
 		<div id="about" class="section about-container">
 			<div class="triangle"></div>
-			<div class="container">
-				<div class="section-intro">
-					<div class="heading-container-border">
-						<span class="subheading">
-							WHAT WE DO
-						</span>
-						<h3 class="heading">
-							STRONGER TOGETHER
-						</h3>
-					</div>
-					<p class="text">
-						The Pro Athlete Business Combine is a one week event taking place in a select U.S. City that will maximize our professional athletes business and network portfolio. With efforts of making the experience a best-in-class, only 30 elite NFL players paired with top elite organizations are invited to develop new business interest and off-the-field networks. 
-					</p>
-				</div>
-				<button class="button about-button">
-					<span class="button-corner button-corner--top-right"></span>
-					<span class="button-corner button-corner--top-left"></span>
-					<span class="button-text">Apply</span>
-					<span class="button-corner button-corner--bottom-left"></span>
-					<span class="button-corner button-corner--bottom-right"></span>
-				</button>
-			</div>
+			<?php
+			echo get_template_part( 'partials/about', 'intro' );
+			?>
 		</div>
 		<!-- ABOUT SECTION -->
 		
