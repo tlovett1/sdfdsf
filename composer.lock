@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "16cc001e612d6d1658c4bd2624931db5",
+    "content-hash": "0c8d60a4b2a50b9368d5c4eb4c6f040c",
     "packages": [
         {
             "name": "aaronholbrook/autoload",
@@ -45,6 +45,71 @@
             ],
             "description": "Automatically and recursively require_once all files in a directory.",
             "time": "2016-05-23 21:24:36"
+        },
+        {
+            "name": "developwithwp/customizer-curation",
+            "version": "v0.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrbobbybryant/customizer-curation.git",
+                "reference": "df260d11a2d01586c9edf117d8b7c00ecd7dadec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrbobbybryant/customizer-curation/zipball/df260d11a2d01586c9edf117d8b7c00ecd7dadec",
+                "reference": "df260d11a2d01586c9edf117d8b7c00ecd7dadec",
+                "shasum": ""
+            },
+            "require": {
+                "aaronholbrook/autoload": "dev-master"
+            },
+            "type": "package",
+            "autoload": {
+                "files": [
+                    "customizer-curation.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "An autosuggest field for curating content via the customizer.",
+            "homepage": "https://github.com/mrbobbybryant/customizer-curation",
+            "time": "2017-11-16T22:12:26+00:00"
+        },
+        {
+            "name": "omg-fields",
+            "version": "0.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrbobbybryant/omg-fields.git",
+                "reference": "1081165005630d360090ef82c36a603bae148b4f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrbobbybryant/omg-fields/zipball/1081165005630d360090ef82c36a603bae148b4f",
+                "reference": "1081165005630d360090ef82c36a603bae148b4f",
+                "shasum": ""
+            },
+            "require": {
+                "aaronholbrook/autoload": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "omg-fields.php"
+                ]
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "A small fields API for WordPress",
+            "homepage": "https://github.com/mrbobbybryant/omg-fields",
+            "support": {
+                "source": "https://github.com/mrbobbybryant/omg-fields/tree/v0.12.0",
+                "issues": "https://github.com/mrbobbybryant/omg-fields/issues"
+            },
+            "time": "2018-02-23T19:12:38+00:00"
         }
     ],
     "packages-dev": [],

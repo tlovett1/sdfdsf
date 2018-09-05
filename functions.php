@@ -36,6 +36,7 @@ if ( file_exists( ATU_PATH . 'vendor/autoload.php' ) ) {
 
 	// Run the setup functions.
 	ATU\Theme\Core\setup();
+	Metaboxes\partners_setup();
 	Customizer\setup();
 	Customizer\social_page_setup();
 	Customizer\footer_setup();

@@ -63,5 +63,18 @@ function footer( WP_Customize_Manager $manager  ) {
 		'settings'    => 'footer_settings[image]',
 		'description' => esc_html__( 'Select or Upload the image you wish to display.', 'atu' ),
 	] ) );
+
+	$manager->add_setting( 'footer_settings_curation', array(
+		'sanitize_callback' => 'autosuggest_validation',
+	));
+
+	$manager->add_control( new \Customizer_Curation( $manager, 'footer_settings_curation', array(
+		'label'       => esc_html__( 'Partners', 'rse' ),
+		'section'     => 'footer_section',
+		'description' => esc_html__( 'Search and select the partners you want to show in the slider..', 'atu' ),
+		'placeholder' => esc_html__( 'Start typing...', 'atu' ),
+		'list'        => true,
+		'resource'    => 'atu_partners',
+	) ) );
 }
 

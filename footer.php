@@ -25,51 +25,9 @@ $footer = get_theme_mod( 'footer_settings' );
 							</h3>
 						<?php endif; ?>
 					</div>
-					<div class="footer-slider-wrapper">
-						<span class="prev">
-							<?php echo Helpers\inline_svg( 'caret' ); ?>
-						</span>
-						<ul id="footerSlider" class="footer-slider">
-							<li class="footer-slider-item-wrapper">
-								<div  class="footer-slider-item">
-									<img src="https://via.placeholder.com/150x150" />
-								</div>
-							</li>
-							<li class="footer-slider-item-wrapper">
-								<div  class="footer-slider-item">
-									<img src="https://via.placeholder.com/150x150" />
-								</div>
-							</li>
-							<li class="footer-slider-item-wrapper">
-								<div  class="footer-slider-item">
-									<img src="https://via.placeholder.com/150x150" />
-								</div>
-							</li>
-							<li class="footer-slider-item-wrapper">
-								<div  class="footer-slider-item">
-									<img src="https://via.placeholder.com/150x150" />
-								</div>
-							</li>
-							<li class="footer-slider-item-wrapper">
-								<div  class="footer-slider-item">
-									<img src="https://via.placeholder.com/150x150" />
-								</div>
-							</li>
-							<li class="footer-slider-item-wrapper">
-								<div  class="footer-slider-item">
-									<img src="https://via.placeholder.com/150x150" />
-								</div>
-							</li>
-							<li class="footer-slider-item-wrapper">
-								<div  class="footer-slider-item">
-									<img src="https://via.placeholder.com/150x150" />
-								</div>
-							</li>
-						</ul>
-						<span class="next">
-							<?php echo Helpers\inline_svg( 'caret' ); ?>
-						</span>
-					</div>
+					<?php
+					echo Views\build_footer_slider();
+					?>
 				</div>
 			</div>
 		</div>
