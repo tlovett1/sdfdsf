@@ -14,11 +14,5 @@
 			endif; ?>
 		</p>
 	</div>
-	<button class="button about-button">
-		<span class="button-corner button-corner--top-right"></span>
-		<span class="button-corner button-corner--top-left"></span>
-		<span class="button-text">Apply</span>
-		<span class="button-corner button-corner--bottom-left"></span>
-		<span class="button-corner button-corner--bottom-right"></span>
-	</button>
+	<?php echo Helpers\button( 'Apply', 'about-button', 'test') ?>
 </div>

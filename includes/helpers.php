@@ -67,7 +67,15 @@ function value_exists( $values, $key = '' ) {
 
 }
 
-
+/**
+ * Function checks to see if a value in an array exists and has been set.
+ *
+ * @param [array]  $subHeading is the customizer settings array.
+ * @param [array] $heading is the customizer settings array.
+ * @param [string] $subHeadingId is the id of the element.
+ * @param [string] $headingId  is the id of the element.
+ * @return HTML returns the markup for the Heading Section.
+ */
 function heading( $subHeading, $heading, $subHeadingId, $headingId ) {
 
 	ob_start(); ?>
@@ -87,5 +95,16 @@ function heading( $subHeading, $heading, $subHeadingId, $headingId ) {
 		<?php endif; ?>
 
 	<?php return ob_get_clean();
+}
 
+function button($text, $class = '', $id = '') {
+	ob_start(); ?>
+	<button class="button <?php echo esc_attr( $class ); ?>" <?php echo  $id ? esc_attr( sprintf( 'id=%s', $id ) ) : null ;?>>
+		<span class="button-corner button-corner--top-right"></span>
+		<span class="button-corner button-corner--top-left"></span>
+		<span class="button-text"><?php echo esc_html( $text ); ?></span>
+		<span class="button-corner button-corner--bottom-left"></span>
+		<span class="button-corner button-corner--bottom-right"></span>
+	</button>
+	<?php return ob_get_clean();
 }
