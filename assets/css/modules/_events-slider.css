@@ -6,6 +6,10 @@
     .next {
         cursor: pointer;
         display: none !Important;
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        padding: 0;
 
         @media(--tablet) {
             display: block !Important;
@@ -25,10 +29,13 @@
 
     .prev {
         transform: rotate(180deg);
+        margin-right: 10px;
     }
 
     .next {
         position: relative;
+        padding-left: 10px;
+
         &:after {
             content: '';
             display: block;

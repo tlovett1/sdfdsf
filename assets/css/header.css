@@ -43,6 +43,13 @@
         left: 0;
         opacity: 0.6;
         z-index: 1;
+        transition: opacity 0.25s;
+    }
+
+    &.header-dark {
+        &:after {
+            opacity: 1;
+        }
     }
 }
 

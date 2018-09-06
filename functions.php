@@ -40,6 +40,8 @@ if ( file_exists( ATU_PATH . 'vendor/autoload.php' ) ) {
 	Customizer\setup();
 	Customizer\about_setup();
 	Customizer\events_setup();
+	Customizer\testimonials_setup();
+	Customizer\contact_setup();
 	Customizer\social_page_setup();
 	Customizer\footer_setup();
 }

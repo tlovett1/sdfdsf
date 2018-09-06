@@ -1,6 +1,6 @@
 export default () => {
-  const wrapper = document.getElementById('eventsSliderWrapper');
-  const slider = document.getElementById('eventsSlider');
+  const wrapper = document.getElementById('testimonalsSliderWrapper');
+  const slider = document.getElementById('testimonalsSlider');
 
   if (!slider) {
     return false;
@@ -16,6 +16,7 @@ export default () => {
     arrows: true,
     prevArrow: jQuery(leftArrow),
     nextArrow: jQuery(rightArrow),
-    dots: false,
+    dots: true,
+    fade: true,
   });
 };

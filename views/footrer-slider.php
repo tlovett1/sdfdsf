@@ -40,7 +40,6 @@ function build_partner_slide( $partner ) {
  */
 function build_footer_slider() {
 
-	// $hero_slider = get_customizer_values( 'hero_slider' );
 	$partners = get_currated_values(
 		'footer_settings_curation', function( $post ) {
 			return Cache\get_partners_meta( $post->id );

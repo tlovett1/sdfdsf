@@ -35,7 +35,7 @@ use ATU\Theme\Views;
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
-	<header class="site-header">
+	<header id="siteHeader" class="site-header">
 		<div id="siteMenu" class="site-header-menu">
 			<button id="menuButton" class="menu-button">
 				<span></span>

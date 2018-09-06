@@ -26,7 +26,7 @@ function build_events_slider() {
 
 	ob_start();
 	?>
-	<div class="events-slider-wrapper">
+	<div id="eventsSliderWrapper" class="events-slider-wrapper" data-ride='carousel'>
 		<ul id="eventsSlider" class="events-slider">
 		<?php foreach ( $images as $image ) :
 			$url = wp_get_attachment_image_src( $image['image'], 'event-slider' )[0]; ?>
@@ -38,12 +38,12 @@ function build_events_slider() {
 		<?php endforeach; ?>
 		</ul>
 		<div class="events-slider-arrows">
-			<div class="prev">
-				<?php echo Helpers\inline_svg('caret');?>
-			</div>
-			<div class="next">
-				<?php echo Helpers\inline_svg('caret');?>
-			</div>
+			<button class="prev">
+				<?php echo Helpers\inline_svg('arrow');?>
+			</button>
+			<button class="next">
+				<?php echo Helpers\inline_svg('arrow');?>
+			</button>
 		</div>
 	</div>
 	<?php

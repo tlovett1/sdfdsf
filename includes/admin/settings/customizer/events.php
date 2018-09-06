@@ -20,7 +20,6 @@ function events_setup() {
 	add_action( 'customize_register', __NAMESPACE__ . '\events_panel' );
 	add_action( 'customize_register', __NAMESPACE__ . '\events_intro' );
 	add_action( 'customize_register', __NAMESPACE__ . '\events_slider' );
-	// add_action( 'customize_register', __NAMESPACE__ . '\events_list' );
 }
 
 /**

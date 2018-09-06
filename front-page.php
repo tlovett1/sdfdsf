@@ -36,12 +36,25 @@ get_header()?>
 				<?php
 					echo get_template_part( 'partials/events', 'intro' );
 					echo Views\build_events_intro_list();
-					echo Helpers\button( 'Apply', '', 'test')
+					echo Helpers\button( 'Apply', '', 'test');
 				?>
 			</div>
-			<?php echo Views\build_events_slider();?>
+			<?php
+				echo Views\build_events_slider();
+				echo get_template_part( 'partials/testimonials', 'slider' );
+			?>
 		</div>
 		<!-- EVENT SECTION -->
+		<!-- CONTACT SECTION -->
+		<div id="contact" class="contact-section section">
+			<div class="contact-container">
+				<?php
+				echo get_template_part( 'partials/contact', 'intro' );
+				echo Views\build_contact_row();
+				?>
+			</div>
+		</div>
+		<!-- CONTACT SECTION -->
 	</main>
 <?php endif; ?>
 <?php get_footer(); ?>
