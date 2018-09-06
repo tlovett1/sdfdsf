@@ -1,4 +1,3 @@
-/* eslint-disable */
 export default () => {
   const slider = document.querySelectorAll('#footerSlider');
   if (!slider) {

@@ -15,11 +15,13 @@ get_header()?>
 			<img src="https://via.placeholder.com/1436x960?text=Hello+World">
 		</div>
 		<!-- ABOUT SECTION -->
-		<div id="about" class="section about-container">
+		<div id="about" class="about-container">
 			<!-- <div class="triangle"></div> -->
-			<?php
-			echo get_template_part( 'partials/about', 'intro' );
-			?>
+			<div class="section">
+				<?php
+					echo get_template_part( 'partials/about', 'intro' );
+				?>
+			</div>
 			<div class="about-list-section section"  style="background-image:url(https://placeimg.com/343/537/arch)">
 				<div class="about-lists-container container">
 					<?php echo get_template_part( 'partials/about', 'lists' ); ?>
@@ -29,12 +31,15 @@ get_header()?>
 		</div>
 		<!-- ABOUT SECTION -->
 		<!-- EVENT SECTION -->
-		<div id="events" class="section events-container">
-		<?php
-			echo get_template_part( 'partials/events', 'intro' );
-			echo Views\build_events_intro_list();
-			echo Helpers\button( 'Apply', '', 'test')
-		?>
+		<div id="events" class="events-container">
+			<div class="section">
+				<?php
+					echo get_template_part( 'partials/events', 'intro' );
+					echo Views\build_events_intro_list();
+					echo Helpers\button( 'Apply', '', 'test')
+				?>
+			</div>
+			<?php echo Views\build_events_slider();?>
 		</div>
 		<!-- EVENT SECTION -->
 	</main>
