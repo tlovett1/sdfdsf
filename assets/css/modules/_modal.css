@@ -46,11 +46,22 @@
     align-items: center;
     justify-content: flex-start;
     overflow: scroll;
+
+    .video & {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        width: calc(100% - 40px);
+    }
 }
 
 .modal-content-wrapper {
     margin-bottom: 200px;
     width: 100%;
+
+    .video & {
+        margin-bottom: 0;
+    }
 }
 
 .modal-container {
@@ -61,6 +72,7 @@
     .video & {
         max-width: 830px;
         margin: 0 auto;
+        padding-top: 80px;
     }
 }
 
@@ -95,6 +107,10 @@
 
     &:focus {
         outline: none;
+    }
+
+    .video & {
+        transform: none;
     }
 }
 
