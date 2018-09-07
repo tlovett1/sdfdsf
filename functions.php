@@ -20,6 +20,7 @@ use ATU\Theme\Customizer;
 use ATU\Theme\Settings;
 use ATU\Theme\Metaboxes;
 use ATU\Theme\Endpoints;
+use ATU\Theme\GravityForms;
 
 
 // Useful global constants.
@@ -37,6 +38,7 @@ if ( file_exists( ATU_PATH . 'vendor/autoload.php' ) ) {
 
 	// Run the setup functions.
 	ATU\Theme\Core\setup();
+	GravityForms\test_setup();
 	Endpoints\endpoint_setup();
 	Metaboxes\partners_setup();
 	Metaboxes\video_setup();
@@ -49,3 +51,4 @@ if ( file_exists( ATU_PATH . 'vendor/autoload.php' ) ) {
 	Customizer\social_page_setup();
 	Customizer\footer_setup();
 }
+
