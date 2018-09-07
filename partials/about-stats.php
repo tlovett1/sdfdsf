@@ -1,61 +1,79 @@
+<?php
+	use ATU\Theme\Helpers;
+	$settings = get_theme_mod( 'about_stats' );
+?>
 <div class="about-stats">
 	<div class="about-stats-container">
-		<div class="about-stats-image about-stats-image--first">
-			<img src="https://placeimg.com/725/597/arch" alt=""/>
-		</div>
-		<div class="about-stats-content about-stats-content--first">
-			<div class="about-stats-pointer">
-			<?php echo Helpers\inline_svg('circle'); ?>
+		<?php  if ( isset( $settings[ 'stat1' ][ 'image' ] ) && ! empty( $settings[ 'stat1' ][ 'image' ] ) ) :  ?>
+			<div class="about-stats-item">
+				<div class="about-stats-image">
+					<?php echo Helpers\get_image_element(  $settings[ 'stat1' ][ 'image' ] , '', 'about-stat1');?>
+				</div>
+				<div class="about-stats-content">
+					<div class="about-stats-pointer">
+					<?php echo Helpers\inline_svg('circle'); ?>
+					</div>
+					<div class="about-stats-text">
+						<span class="about-stats-heading">
+							<?php echo esc_html( $settings[ 'stat1' ][ 'heading' ] ); ?>
+						</span>
+						<span class="about-stats-number">
+							<?php echo esc_html( $settings[ 'stat1' ][ 'number' ] ); ?>
+						</span>
+						<span class="about-stats-subheading">
+							<?php echo esc_html( $settings[ 'stat1' ][ 'label' ] ); ?>
+						</span>
+					</div>
+				</div>
 			</div>
-			<div class="about-stats-text">
-				<span class="about-stats-heading">
-					PILLAR 1: Business Combine
-				</span>
-				<span class="about-stats-number">
-					543
-				</span>
-				<span class="about-stats-subheading">
-					current players
-				</span>
+		<?php endif;
+		if ( isset( $settings[ 'stat2' ][ 'image' ] ) && ! empty( $settings[ 'stat2' ][ 'image' ] ) ) :
+		?>
+		<div class="about-stats-item about-stats-item--second">
+			<div class="about-stats-image">
+				<?php echo Helpers\get_image_element(  $settings[ 'stat2' ][ 'image' ] , '', 'about-stat2');?>
+			</div>
+			<div class="about-stats-content">
+				<div class="about-stats-pointer">
+					<?php echo Helpers\inline_svg('circle'); ?>
+				</div>
+				<div class="about-stats-text">
+					<span class="about-stats-heading">
+						<?php echo esc_html( $settings[ 'stat2' ][ 'heading' ] ); ?>
+					</span>
+					<span class="about-stats-number">
+						<?php echo esc_html( $settings[ 'stat2' ][ 'number' ] ); ?>
+					</span>
+					<span class="about-stats-subheading">
+						<?php echo esc_html( $settings[ 'stat2' ][ 'label' ] ); ?>
+					</span>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="about-stats-image about-stats-image--second">
-				<img src="https://placeimg.com/416/539/nature" alt=""/>
-	</div>
-	<div class="about-stats-content">
-		<div class="about-stats-pointer">
-			<?php echo Helpers\inline_svg('circle'); ?>
+		<?php endif;
+		if ( isset( $settings[ 'stat3' ][ 'image' ] ) && ! empty( $settings[ 'stat3' ][ 'image' ] ) ) :
+		?>
+		<div class="about-stats-item  about-stats-item--third">
+			<div class="about-stats-image">
+				<?php echo Helpers\get_image_element(  $settings[ 'stat3' ][ 'image' ] , '', 'about-stat3');?>
+			</div>
+			<div class="about-stats-content">
+				<div class="about-stats-pointer">
+					<?php echo Helpers\inline_svg('circle'); ?>
+				</div>
+				<div class="about-stats-text">
+					<span class="about-stats-heading">
+						<?php echo esc_html( $settings[ 'stat3' ][ 'heading' ] ); ?>
+					</span>
+					<span class="about-stats-number">
+						<?php echo esc_html( $settings[ 'stat3' ][ 'number' ] ); ?>
+					</span>
+					<span class="about-stats-subheading">
+						<?php echo esc_html( $settings[ 'stat3' ][ 'label' ] ); ?>
+					</span>
+				</div>
+			</div>
 		</div>
-		<div class="about-stats-text">
-			<span class="about-stats-heading">
-				PILLAR 1: Business Combine
-			</span>
-			<span class="about-stats-number">
-				543
-			</span>
-			<span class="about-stats-subheading">
-				current players
-			</span>
-		</div>
-	</div>
- 	<div class="about-stats-image about-stats-image--third">
-			<img src="https://placeimg.com/454/539/tech" alt=""/>
-	</div>
-	<div class="about-stats-content">
-		<div class="about-stats-pointer">
-			<?php echo Helpers\inline_svg('circle'); ?>
-		</div>
-		<div class="about-stats-text">
-			<span class="about-stats-heading">
-				PILLAR 1: Business Combine
-			</span>
-			<span class="about-stats-number">
-				543
-			</span>
-			<span class="about-stats-subheading">
-				current players
-			</span>
-		</div>
+		<?php endif; ?>
 	</div>
 </div>

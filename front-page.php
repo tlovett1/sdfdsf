@@ -19,6 +19,7 @@ get_header()?>
 			<div class="section">
 				<?php echo get_template_part( 'partials/about', 'intro' ); ?>
 			</div>
+			<?php echo get_template_part( 'partials/about', 'stats' ); ?>
 			<div class="about-list-section section"  style="background-image:url(https://placeimg.com/343/537/arch)">
 				<div class="about-lists-container container">
 					<?php echo get_template_part( 'partials/about', 'lists' ); ?>

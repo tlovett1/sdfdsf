@@ -22,6 +22,9 @@ function setup() {
 	add_action( 'customize_preview_init', $n( 'atu_theme_customizer_live_preview' ) );
 	add_image_size( 'event-slider', 930, 762 );
 	add_image_size( 'video-image', 340, 340 );
+	add_image_size( 'about-stat1', 725, 597 );
+	add_image_size( 'about-stat2', 416, 539 );
+	add_image_size( 'about-stat3', 454, 539 );
 }
 
 /**
@@ -48,7 +51,7 @@ function scripts() {
 
 	wp_enqueue_style(
 		'wpb-google-fonts',
-		'https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:300,400',
+		'https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:300,400,700',
 		array(),
 		ATU_VERSION
 	);
