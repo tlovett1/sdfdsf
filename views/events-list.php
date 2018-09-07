@@ -13,16 +13,36 @@ use ATU\Theme\Cache;
 /**
  * Builds out the Events Itemt.
  *
- * @return HTML return the mark up for the Events Intro List.
+ * @return HTML return the mark up for the Events List Item.
  */
-function build_events_item($event) {
+function build_events_item($event, $index) {
+
+	$index += 1;
 
 	if ( empty( $event ) ) {
 		return false;
 	}
 	ob_start();
 	?>
-	<li class="">
+	<li class="event-list-item">
+		<?php 
+		echo Helpers\inline_svg( sprintf( 'events%s', esc_attr( $index ) ) );
+		?>
+		<h4 class="event-title">
+			<?php echo $event['title']; ?>
+		</h4>
+		<span class="event-info">
+			<?php
+				echo Helpers\inline_svg( 'pin' );
+				echo $event['location'];
+			?>
+		</span>
+		<span class="event-info">
+			<?php
+				echo Helpers\inline_svg( 'calendar' );
+				echo $event['date'];
+			?>
+		</span>
 	</li>
 	<?php
 	return ob_get_clean();
@@ -32,7 +52,7 @@ function build_events_item($event) {
 /**
  * Builds out the Events List.
  *
- * @return HTML return the mark up for the Events Intro List.
+ * @return HTML return the mark up for the Events  List.
  */
 function build_events_list() {
 
@@ -47,11 +67,9 @@ function build_events_list() {
 	}
 	ob_start();
 	?>
-	<ul>
-		<?php foreach ( $events as $event ) : 
-			echo '<pre>';
-			print_r($event);
-			echo '</pre>';
+	<ul class="events-list">
+		<?php foreach ( $events as $key=>$event ) :
+			echo build_events_item($event, $key);
 		endforeach; ?>
 	</ul>
 	<?php

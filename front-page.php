@@ -42,7 +42,7 @@ get_header()?>
 				echo get_template_part( 'partials/testimonials', 'slider' );
 			?>
 			<div class="events-schedule section">
-				<div class="contact-container">
+				<div class="events-list-container">
 					<?php
 						echo get_template_part( 'partials/events', 'list' );
 						echo Views\build_events_list();
