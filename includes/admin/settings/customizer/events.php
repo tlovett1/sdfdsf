@@ -20,6 +20,7 @@ function events_setup() {
 	add_action( 'customize_register', __NAMESPACE__ . '\events_panel' );
 	add_action( 'customize_register', __NAMESPACE__ . '\events_intro' );
 	add_action( 'customize_register', __NAMESPACE__ . '\events_slider' );
+	add_action( 'customize_register', __NAMESPACE__ . '\events_list' );
 }
 
 /**
@@ -131,4 +132,53 @@ function events_slider( WP_Customize_Manager $manager  ) {
 			],
         ]
     ) ) );
+}
+
+/**
+ * Creates events page settings and controls for the Events Intro Section.
+ *
+ * @param WP_Customize_Manager $manager Customizer Class Instance.
+ * @return void
+ */
+function events_list( WP_Customize_Manager $manager  ) {
+	$manager->add_section( 'events_list_section', [
+		'title' => esc_html__( 'Events List', 'atu' ),
+		'panel' => EVENTS_PANEL,
+	]);
+
+	$manager->add_setting( 'events_list_settings[subheading]', [
+		'type'      => 'theme_mod',
+		'transport' => 'postMessage',
+	]);
+
+	$manager->add_control( 'events_list_settings[subheading]', [
+		'label'   => esc_html__( 'Sub Heading', 'atu' ),
+		'section' => 'events_list_section',
+		'type'    => 'text',
+	]);
+
+	$manager->add_setting( 'events_list_settings[heading]', [
+		'type'      => 'theme_mod',
+		'transport' => 'postMessage',
+	] );
+
+	$manager->add_control( 'events_list_settings[heading]', [
+		'label'   => esc_html__( 'Heading', 'atu' ),
+		'section' => 'events_list_section',
+		'type'    => 'text',
+	]);
+
+	$manager->add_setting( 'events_list_curation', array(
+		'sanitize_callback' => 'autosuggest_validation',
+	));
+
+	$manager->add_control( new \Customizer_Curation( $manager, 'events_list_curation', array(
+		'label'       => esc_html__( 'Events', 'atu' ),
+		'section'     => 'events_list_section',
+		'description' => esc_html__( 'Search and select the events you want to display..', 'atu' ),
+		'placeholder' => esc_html__( 'Start typing...', 'atu' ),
+		'list'        => true,
+		'resource'    => 'atu_events',
+	) ) );
+
 }

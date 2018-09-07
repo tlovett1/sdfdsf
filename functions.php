@@ -40,6 +40,7 @@ if ( file_exists( ATU_PATH . 'vendor/autoload.php' ) ) {
 	Endpoints\endpoint_setup();
 	Metaboxes\partners_setup();
 	Metaboxes\video_setup();
+	Metaboxes\events_setup();
 	Customizer\setup();
 	Customizer\about_setup();
 	Customizer\events_setup();

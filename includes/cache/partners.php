@@ -68,7 +68,7 @@ function get_partners() {
 
 	return array_map( function( $partner ) {
 
-		return get_companies_meta( $partner->ID );
+		return get_partners_meta( $partner->ID );
 
 	}, $partners );
 }

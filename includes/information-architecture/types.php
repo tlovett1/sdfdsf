@@ -20,3 +20,14 @@ function get_type_partners() {
 function get_type_videos() {
 	return 'atu_videos';
 }
+
+
+/**
+ * Defines the Events type name.
+ *
+ * @return string returns the string name used with register_post_type to create
+ * a post type.
+ */
+function get_type_events() {
+	return 'atu_events';
+}

@@ -41,7 +41,14 @@ get_header()?>
 				echo Views\build_events_slider();
 				echo get_template_part( 'partials/testimonials', 'slider' );
 			?>
-			<div class="events-schedule section"></div></div>
+			<div class="events-schedule section">
+				<div class="contact-container">
+					<?php
+						echo get_template_part( 'partials/events', 'list' );
+						echo Views\build_events_list();
+					?>
+				</div>
+			</div>
 		</div>
 		<!-- EVENT SECTION -->
 		<!-- MEDIA SECTION -->
@@ -65,6 +72,9 @@ get_header()?>
 			</div>
 		</div>
 		<!-- CONTACT SECTION -->
+		<?php
+			echo get_template_part( 'partials/modal', 'modal' );
+		?>
 	</main>
 <?php endif; ?>
 <?php get_footer(); ?>

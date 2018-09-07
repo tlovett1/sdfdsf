@@ -6,8 +6,8 @@
 				<div id="modalContent" class="modal-content">
 				</div>
 				<button id="modalClose" class="modal-close">
-				<?php echo Helpers\inline_svg('close'); ?>
-			</button>
+					<?php echo Helpers\inline_svg('close'); ?>
+				</button>
 			</div>
 		</div>
 	</div>
