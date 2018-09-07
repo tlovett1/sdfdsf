@@ -5,6 +5,8 @@ import registerFooter from './footer-slider';
 import registerEventsSlider from './events-slider';
 import registerTestimonialsSlider from './testimonials-slider';
 import registerHeader from './header';
+import registerLoadMore from './load-more';
+import registerVideoModal from './video-modal';
 
 document.addEventListener('DOMContentLoaded', () => {
   registerHeader();
@@ -12,5 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   registerSmoothScroll();
   registerEventsSlider();
   registerTestimonialsSlider();
+  registerLoadMore();
+  registerVideoModal();
   registerFooter();
 });

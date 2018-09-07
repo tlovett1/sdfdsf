@@ -9,7 +9,7 @@ module.exports = {
   globals: {
     document: true,
     fetch: true,
-    RSE: true,
+    ATU: true,
     window: true,
     wp: true,
   },

@@ -1,0 +1,118 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    &:after {
+        background-color: var(--black);
+        opacity: 0.6;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .modal-open & {
+        opacity: 1;
+        z-index: 4;
+        pointer-events: inherit;
+        visibility: visible;
+        height: 100vh;
+    }
+}
+
+.modal-wrapper {
+    max-width: 1120px;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 1;
+    overflow: auto;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.modal-content-wrapper {
+    margin-bottom: 200px;
+    width: 100%;
+}
+
+.modal-container {
+    height: auto;
+    width: auto;
+    position: relative;
+
+    .video & {
+        max-width: 830px;
+        margin: 0 auto;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    right: 0;
+    transform: translateY(-90px);
+    top: 0;
+    appearance: none;
+    background-color: transparent;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid var(--green);
+    cursor: pointer;
+
+    &:hover {
+        svg {
+            fill: var(--green);
+        }
+    }
+
+    svg {
+        width: 26px;
+        height: 26px;
+        fill: var(--white);
+        transition: fill 0.25s;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.video-modal {
+    position: relative;
+    padding-bottom: 56.50%;
+	padding-top: 25px;
+    height: 0;
+    
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-item & {
+        display: none;
+    }
+}

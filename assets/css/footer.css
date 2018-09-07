@@ -156,6 +156,7 @@
         position: absolute;
         top: 50%;
         display: none !important;
+        z-index: 2;
 
         @media(--tablet) {
             display: block !important;
@@ -234,6 +235,7 @@
 
 .footer-slider-item {
     margin: 0 10px;
+    display: block;
 
     @media(--tablet) {
         width: 150px;

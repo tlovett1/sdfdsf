@@ -17,5 +17,6 @@ export default () => {
     prevArrow: jQuery(leftArrow),
     nextArrow: jQuery(rightArrow),
     dots: false,
+    centerMode: true,
   });
 };

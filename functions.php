@@ -19,6 +19,7 @@ use ATU\Theme\Core;
 use ATU\Theme\Customizer;
 use ATU\Theme\Settings;
 use ATU\Theme\Metaboxes;
+use ATU\Theme\Endpoints;
 
 
 // Useful global constants.
@@ -36,11 +37,14 @@ if ( file_exists( ATU_PATH . 'vendor/autoload.php' ) ) {
 
 	// Run the setup functions.
 	ATU\Theme\Core\setup();
+	Endpoints\endpoint_setup();
 	Metaboxes\partners_setup();
+	Metaboxes\video_setup();
 	Customizer\setup();
 	Customizer\about_setup();
 	Customizer\events_setup();
 	Customizer\testimonials_setup();
+	Customizer\media_setup();
 	Customizer\contact_setup();
 	Customizer\social_page_setup();
 	Customizer\footer_setup();

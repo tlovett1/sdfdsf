@@ -51,7 +51,7 @@ function build_footer_slider() {
 	}
 	ob_start();
 	?>
-	<div class="footer-slider-wrapper">
+	<div id="footerSliderWrapper" class="footer-slider-wrapper">
 		<span class="prev">
 			<?php echo Helpers\inline_svg( 'caret' ); ?>
 		</span>

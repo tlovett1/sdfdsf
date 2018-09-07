@@ -40,21 +40,38 @@ get_header()?>
 				?>
 			</div>
 			<?php
-				echo Views\build_events_slider();
+				// echo Views\build_events_slider();
 				echo get_template_part( 'partials/testimonials', 'slider' );
 			?>
+			<div class="events-schedule section"></div></div>
 		</div>
 		<!-- EVENT SECTION -->
+		<!-- MEDIA SECTION -->
+		<div id="media" class="section media-section">
+			<?php echo get_template_part( 'partials/media', 'media' ); ?>
+			<div class="container">
+				<?php
+					echo Views\build_videos();
+					echo Helpers\button( 'Load More', 'white', 'loadmore');
+				?>
+			</div>
+
+		</div>
+		<!-- MEDIA SECTION -->
 		<!-- CONTACT SECTION -->
 		<div id="contact" class="contact-section section">
 			<div class="contact-container">
 				<?php
-				echo get_template_part( 'partials/contact', 'intro' );
-				echo Views\build_contact_row();
+					echo get_template_part( 'partials/contact', 'intro' );
+					echo Views\build_contact_row();
 				?>
 			</div>
 		</div>
 		<!-- CONTACT SECTION -->
+		<?php
+			echo get_template_part( 'partials/modal', 'modal' );
+		?>
+
 	</main>
 <?php endif; ?>
 <?php get_footer(); ?>

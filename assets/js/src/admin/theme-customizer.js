@@ -26,4 +26,7 @@ export default () => {
     '#eventsIntroSubHeading',
   );
   bindCustomizerValue('events_intro_settings[text]', '#eventsIntroText');
+
+  bindCustomizerValue('media_settings[subheading]', '#mediaSubHeading');
+  bindCustomizerValue('media_settings[heading]', '#mediaHeading');
 };

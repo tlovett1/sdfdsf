@@ -26,7 +26,7 @@ $footer = get_theme_mod( 'footer_settings' );
 						<?php endif; ?>
 					</div>
 					<?php
-					// echo Views\build_footer_slider();
+					echo Views\build_footer_slider();
 					?>
 				</div>
 			</div>

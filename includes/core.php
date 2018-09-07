@@ -21,6 +21,7 @@ function setup() {
 	add_action( 'customize_controls_enqueue_scripts', $n( 'enqueue_customizer_scripts' ) );
 	add_action( 'customize_preview_init', $n( 'atu_theme_customizer_live_preview' ) );
 	add_image_size( 'event-slider', 930, 762 );
+	add_image_size( 'video-image', 340, 340 );
 }
 
 /**
@@ -54,7 +55,7 @@ function scripts() {
 
 	wp_localize_script(
 		'atu_theme-js',
-		'atu',
+		'ATU',
 		[
 			'siteUrl' => site_url(),
 		]
