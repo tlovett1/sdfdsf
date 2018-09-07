@@ -44,7 +44,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     overflow: scroll;
 }
 
@@ -103,7 +103,7 @@
     padding-bottom: 56.50%;
 	padding-top: 25px;
     height: 0;
-    
+
     iframe {
         position: absolute;
         top: 0;

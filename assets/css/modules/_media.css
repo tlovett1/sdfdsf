@@ -13,8 +13,20 @@
 
 .video-lists {
     padding: 0;
-    margin: 80px -25px 0;
+    margin: 40px 0;
     list-style: none;
+
+    @media(--tablet) {
+        margin: 80px -25px 0;
+    }
+
+    @media(max-width: 1119px) {
+        margin: 80px -20px 0;
+    }
+
+    @media(max-width: 600px) {
+        margin: 40px 0;
+    }
 
     &:after {
         content: "";
@@ -25,25 +37,33 @@
 
 .video-item {
     float: left;
-    width: calc(33.33% - 50px);
-    margin: 0 25px;
+    width: calc(100%);
     position: relative;
     cursor: pointer;
 
-    &:first-child {
-        padding-top: 50px;
+    @media(min-width: 600px) {
+        width: calc(50% - 50px);
+        margin: 0 25px;
     }
 
-    &:nth-child(3) {
-        padding-top: 100px;
-    }
+    @media(--tablet) {
+        width: calc(33.33% - 50px);
 
-    &:nth-child(3n) {
-        padding-top: 100px;
-    }
-
-    &:nth-child(4n) {
-        padding-top: 50px;
+        &:first-child {
+            padding-top: 50px;
+        }
+    
+        &:nth-child(3) {
+            padding-top: 100px;
+        }
+    
+        &:nth-child(3n) {
+            padding-top: 100px;
+        }
+    
+        &:nth-child(4n) {
+            padding-top: 50px;
+        }
     }
 
     &:hover {
@@ -123,6 +143,7 @@
     color: #ffffff;
     margin-bottom: 10px;
     display: block;
+    text-transform: uppercase;
 }
 
 .video-date {

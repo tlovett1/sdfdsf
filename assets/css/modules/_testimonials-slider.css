@@ -7,17 +7,16 @@
 
 
     @media(--tablet) {
-        max-width: 1190px;
+        max-width: 930px;
         margin: 0 auto;
         padding: 0 170px;
     }
 
     .heading-container {
-        width: 50%;
-        margin-bottom: 40px;
 
         @media(--tablet) {
-            width: 25%;
+            width: 40%;
+            margin: 0 0 40px 0;
         }
     }
 }
