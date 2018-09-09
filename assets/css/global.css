@@ -10,12 +10,11 @@ body {
     position:relative;
     font-family: var(--roboto);
 
-    @media(--phone) {
-        .modal-open &{
-             overflow: hidden;
-             position: fixed;
-        }
-    } 
+    &.video-modal-open,
+    &.modal-open {
+        overflow: hidden;
+        position: fixed;
+    }
  }
 
  @media screen and (max-width: 782px) {

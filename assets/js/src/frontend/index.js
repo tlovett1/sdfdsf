@@ -7,6 +7,7 @@ import registerTestimonialsSlider from './testimonials-slider';
 import registerHeader from './header';
 import registerLoadMore from './load-more';
 import registerVideoModal from './video-modal';
+import registerFormModal from './form-modal';
 import registerHero from './hero';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,4 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
   registerVideoModal();
   registerFooter();
   registerHero();
+  registerFormModal();
 });

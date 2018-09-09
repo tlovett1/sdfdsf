@@ -34,7 +34,7 @@ get_header()?>
 					<?php
 						echo get_template_part( 'partials/events', 'intro' );
 						echo Views\build_events_intro_list();
-						echo Helpers\button( 'Apply', '', 'test');
+						echo Helpers\button( 'Apply', 'form-button');
 					?>
 				</div>
 			</div>
@@ -74,7 +74,8 @@ get_header()?>
 		</div>
 		<!-- CONTACT SECTION -->
 		<?php
-			echo get_template_part( 'partials/modal', 'modal' );
+			echo get_template_part( 'partials/modal', 'video' );
+			echo get_template_part( 'partials/modal', 'form' );
 		?>
 	</main>
 <?php endif; ?>

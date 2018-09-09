@@ -1,5 +1,5 @@
 <?php use ATU\Theme\Helpers; ?>
-<div id="modal" class="modal video">
+<div id="modalVideo" class="modal video">
 	<div class="modal-wrapper">
 		<div class="modal-content-wrapper">
 			<div class="modal-container">

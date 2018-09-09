@@ -12,7 +12,7 @@ export default () => {
   const images = document.querySelectorAll('.comparison-image');
 
   function Init() {
-    const slider = new ImageComparison({
+    new ImageComparison({
       container: sliderContainer,
       startPosition: 50,
       data: [
@@ -24,8 +24,6 @@ export default () => {
         },
       ],
     });
-
-    slider();
   }
 
   return Init();

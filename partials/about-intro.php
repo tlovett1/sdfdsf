@@ -14,5 +14,5 @@
 			endif; ?>
 		</p>
 	</div>
-	<?php echo Helpers\button( 'Apply', 'about-button', 'test') ?>
+	<?php echo Helpers\button( 'Apply', 'about-button form-button') ?>
 </div>

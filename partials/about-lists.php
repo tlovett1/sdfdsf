@@ -11,5 +11,5 @@ echo Views\build_about_list();
 	<div class="heading-container">
 		<?php echo Helpers\heading( $settings['subheading'], $settings['heading'],  'aboutListsSubHeading', 'aboutListsHeading', 'white') ?>
 	</div>
-	<?php echo Helpers\button( 'Get Started Now', 'white', 'test') ?>
+	<?php echo Helpers\button( 'Get Started Now', 'white form-button') ?>
 </div>

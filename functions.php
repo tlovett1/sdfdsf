@@ -50,6 +50,7 @@ if ( file_exists( ATU_PATH . 'vendor/autoload.php' ) ) {
 	Customizer\testimonials_setup();
 	Customizer\media_setup();
 	Customizer\contact_setup();
+	Customizer\form_setup();
 	Customizer\social_page_setup();
 	Customizer\footer_setup();
 }

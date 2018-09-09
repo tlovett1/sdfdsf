@@ -5,6 +5,7 @@ module.exports = {
     'arrow-parens': 0,
     'consistent-return': 0,
     'no-param-reassign': 0,
+    'no-new': 0,
   },
   globals: {
     document: true,

@@ -8,21 +8,22 @@ export const launchModal = (body, modalContent, item) => {
   const iframe = videoEmbed.getElementsByTagName('iframe')[0];
 
   if (body[0].classList.contains('modal')) {
-    body[0].classList.remove('modal-open');
+    body[0].classList.remove('video-modal-open');
     modalContent.innerHTML = '';
     iframe.src.replace('&autoplay=1', '');
   } else {
-    body[0].classList.add('modal-open');
+    body[0].classList.add('video-modal-open');
     modalContent.appendChild(videoEmbed);
     iframe.src += '&autoplay=1';
   }
 };
 
 export default () => {
+  const modal = document.getElementById('modalVideo');
   const videos = document.querySelectorAll('.video-item');
-  const close = document.getElementById('modalClose');
+  const close = modal.querySelector('.modal-close');
   const body = document.getElementsByTagName('body');
-  const modalContent = document.getElementById('modalContent');
+  const modalContent = modal.querySelector('.modal-content');
 
   if (videos.length <= 0) {
     return false;
@@ -36,7 +37,7 @@ export default () => {
     });
 
     close.addEventListener('click', () => {
-      body[0].classList.remove('modal-open');
+      body[0].classList.remove('video-modal-open');
       modalContent.innerHTML = '';
     });
   }

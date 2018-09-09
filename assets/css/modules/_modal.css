@@ -22,17 +22,40 @@
         z-index: 0;
     }
 
-    .modal-open & {
-        opacity: 1;
-        z-index: 4;
-        pointer-events: inherit;
-        visibility: visible;
-        height: 100vh;
+    .close {
+        max-width: 80%;
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        z-index: 999;
+        top: calc(25% - 80px);
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media(min-width: 1120px) {
+            max-width: 1120px;
+        }
     }
 }
 
+.video-modal-open .video {
+    opacity: 1;
+    z-index: 4;
+    pointer-events: inherit;
+    visibility: visible;
+    height: 100vh;
+}
+
+.modal-open .form {
+    opacity: 1;
+    z-index: 4;
+    pointer-events: inherit;
+    visibility: visible;
+    height: 100vh;
+}
+
 .modal-wrapper {
-    max-width: 1120px;
+    max-width: 80%;
     left: 50%;
     width: 100%;
     height: 100%;
@@ -40,12 +63,15 @@
     transform: translateX(-50%);
     z-index: 1;
     overflow: auto;
-    top: 10%;
+    top: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    overflow: scroll;
+
+    @media(min-width: 1120px) {
+        max-width: 1120px;
+    }
 
     .video & {
         top: 50%;
@@ -53,11 +79,20 @@
         height: auto;
         width: calc(100% - 40px);
     }
+
+    .form & {
+
+        @media(--phone) {
+            max-width: 100%;
+            width: calc(100% - 40px);
+        }
+    }
 }
 
 .modal-content-wrapper {
     margin-bottom: 200px;
     width: 100%;
+
 
     .video & {
         margin-bottom: 0;
@@ -111,6 +146,14 @@
 
     .video & {
         transform: none;
+    }
+
+    .close & {
+        transform: none;
+        position: relative;
+        top: auto;
+        right: 0;
+        margin-left: auto;
     }
 }
 
