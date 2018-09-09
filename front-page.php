@@ -11,8 +11,8 @@ use ATU\Theme\Views;
 get_header()?>
 <?php if ( have_posts() ) : ?>
 	<main class="page-wrapper">
-		<div id="home" class="hero">
-			<img src="https://via.placeholder.com/1436x100?text=Hello+World">
+		<div id="home" class="hero-wrapper">
+			<?php echo get_template_part( 'partials/hero', 'hero' ); ?>
 		</div>
 		<!-- ABOUT SECTION -->
 		<div id="about" class="about-container">

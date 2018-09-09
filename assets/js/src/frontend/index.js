@@ -7,6 +7,7 @@ import registerTestimonialsSlider from './testimonials-slider';
 import registerHeader from './header';
 import registerLoadMore from './load-more';
 import registerVideoModal from './video-modal';
+import registerHero from './hero';
 
 document.addEventListener('DOMContentLoaded', () => {
   registerHeader();
@@ -17,4 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
   registerLoadMore();
   registerVideoModal();
   registerFooter();
+  registerHero();
 });

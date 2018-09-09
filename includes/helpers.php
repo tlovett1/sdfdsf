@@ -34,7 +34,7 @@ function inline_svg( $name, $force = false ) {
  * @param string $size is the size you want to use for your image.
  * @return HTML returns the markup for the image element with the id, class and size you passed in.
  */
-function get_image_element( $image_id, $id = '', $class = '', $size = 'medium' ) {
+function get_image_element( $image_id, $id = '', $class = '', $size = 'full' ) {
 
 	if ( empty( $image_id ) ) {
 		return false;
@@ -102,6 +102,15 @@ function heading( $subHeading, $heading, $subHeadingId, $headingId, $class = '',
 	<?php return ob_get_clean();
 }
 
+
+/**
+ * Function that builds out a button.
+ *
+ * @param [string]  $text is the text of the button.
+ * @param [string] $class is the class of the button.
+ * @param [string] $id is the id of the button.
+ * @return HTML returns the markup for a button.
+ */
 function button($text, $class = '', $id = '') {
 	ob_start(); ?>
 	<button class="button <?php echo esc_attr( $class ); ?>" <?php echo  $id ? esc_attr( sprintf( 'id=%s', $id ) ) : null ;?>>

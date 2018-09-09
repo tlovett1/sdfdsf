@@ -25,6 +25,7 @@ function setup() {
 	add_image_size( 'about-stat1', 725, 597 );
 	add_image_size( 'about-stat2', 416, 539 );
 	add_image_size( 'about-stat3', 454, 539 );
+	add_image_size( 'hero-image', 1436, 900 );
 }
 
 /**
@@ -75,6 +76,13 @@ function scripts() {
 	wp_enqueue_style(
 		'slick-css',
 		ATU_URL . '/assets/css/vendor/slick.css',
+		array(),
+		ATU_VERSION
+	);
+
+	wp_enqueue_style(
+		'imageComparison-css',
+		ATU_URL . '/assets/css/vendor/imageComparison.css',
 		array(),
 		ATU_VERSION
 	);

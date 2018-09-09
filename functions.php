@@ -42,6 +42,7 @@ if ( file_exists( ATU_PATH . 'vendor/autoload.php' ) ) {
 	Metaboxes\video_setup();
 	Metaboxes\events_setup();
 	Customizer\setup();
+	Customizer\hero_setup();
 	Customizer\about_setup();
 	Customizer\events_setup();
 	Customizer\testimonials_setup();

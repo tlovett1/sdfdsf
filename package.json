@@ -46,6 +46,7 @@
     "babel-runtime": "^6.23.0",
     "compression-webpack-plugin": "^0.4.0",
     "gumshoejs": "github:cferdinandi/gumshoe",
+    "image-comparison": "^2.0.4",
     "normalize.css": "^5.0.0",
     "postcss-nested": "^1.0.0",
     "smooth-scroll": "^14.2.1",

@@ -15,7 +15,7 @@ body {
              overflow: hidden;
              position: fixed;
         }
-    }
+    } 
  }
 
  @media screen and (max-width: 782px) {
@@ -169,10 +169,6 @@ body {
     }
 }
 
-
-.hero {
-    height: 962px;
-}
 
 .triangle {
     width: 0; 

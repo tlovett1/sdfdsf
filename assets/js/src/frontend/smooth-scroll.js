@@ -9,7 +9,7 @@ export default () => {
   gumshoe.init({
     selector: '.menu-item a[href*="#"]',
     selectorHeader: 'header',
-    offset: 0,
+    offset: 50,
     activeClass: 'active',
     scrollDelay: false,
   });
