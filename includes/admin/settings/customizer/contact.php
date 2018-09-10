@@ -1,4 +1,9 @@
 <?php
+/**
+ * File contains the comtact section customizer controls;
+ *
+ * @package atu-theme
+ */
 
 namespace ATU\Theme\Customizer;
 

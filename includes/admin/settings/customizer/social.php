@@ -1,4 +1,9 @@
 <?php
+/**
+ * File contains for the social media customizer controls;
+ *
+ * @package atu-theme
+ */
 
 namespace ATU\Theme\Customizer;
 
