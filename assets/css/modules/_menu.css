@@ -69,20 +69,21 @@
 .menu-item {
     display: inline-block;
 
-    &:first-child {
-        a {
-            margin-left: 0;
+    @media(--tablet) {
+        &:first-child {
+            a {
+                margin-left: 0;
+            }
+        }
+
+        &:last-child {
+            a {
+                margin-right: 0;
+            }
         }
     }
 
-
-    &:last-child {
-        a {
-            margin-right: 0;
-        }
-    }
-
-    a { 
+    a {
         color: var(--white);
         font-family: var(--condensed);
         font-size: 16px;
