@@ -14,7 +14,7 @@ $footer = get_theme_mod( 'footer_settings' );
 		<div data-aos="fade-up"  data-aos-duration="3000">
 		<div class="footer-top">
 			<div class="section-intro section">
-				<div class="footer-background-image"  style="background-image:url(<?php echo esc_url(wp_get_attachment_url($footer['image']));?>)"></div>
+				<div class="footer-background-image"  style="background-image:url(<?php echo esc_url( wp_get_attachment_url( $footer['image'] ) ); ?>)"></div>
 				<div class="container">
 					<div class="heading-container">
 						<?php
