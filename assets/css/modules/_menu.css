@@ -112,7 +112,7 @@
         }
 
         @media(min-width: 950px) {
-            padding: 5px 40px;
+            padding: 5px 40px 2px;
         }
 
         &:after {

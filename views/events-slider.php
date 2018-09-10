@@ -30,8 +30,7 @@ function build_events_slider() {
 			$url = wp_get_attachment_image_src( $image['image'], 'event-slider' )[0];
 			?>
 			<li class="events-slide">
-				<span class="event-slider-image-wrapper">
-					<img src="<?php echo esc_attr( $url ); ?>" alt="Events" />
+				<span class="event-slider-image-wrapper" style="background-image:url(<?php echo esc_attr( $url ); ?>)">
 				</span>
 			</li>
 		<?php endforeach; ?>
