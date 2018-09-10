@@ -1,13 +1,13 @@
 export default () => {
   const wrapper = document.getElementById('testimonalsSliderWrapper');
   const slider = document.getElementById('testimonalsSlider');
-  const totalSlides = wrapper.querySelector('.total-slides');
-  const slide = wrapper.querySelector('.current-slide');
 
   if (!slider && !wrapper) {
     return false;
   }
 
+  const totalSlides = wrapper.querySelector('.total-slides');
+  const slide = wrapper.querySelector('.current-slide');
   const rightArrow = wrapper.querySelector('.prev');
   const leftArrow = wrapper.querySelector('.next');
 
