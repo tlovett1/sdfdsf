@@ -8,18 +8,10 @@ export default () => {
     return false;
   }
 
-  function launchModal() {
-    if (body.classList.contains('modal')) {
-      body.classList.remove('modal-open');
-    } else {
-      body.classList.add('modal-open');
-    }
-  }
-
   function Init() {
     [].forEach.call(buttons, button => {
       button.addEventListener('click', () => {
-        launchModal();
+        body.classList.toggle('modal-open');
       });
     });
 

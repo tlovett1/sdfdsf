@@ -5,11 +5,11 @@
  * @package atu-theme
  */
 
-	$settings = get_theme_mod( 'testimonials_settings' );
-	$slider   = get_customizer_values( 'testimonials_settings_repeater' );
+use ATU\Theme\Helpers;
+use ATU\Theme\Views;
 
-	use ATU\Theme\Helpers;
-	use ATU\Theme\Views;
+$settings = get_theme_mod( 'testimonials_settings' );
+$slider   = get_customizer_values( 'testimonials_settings_repeater' );
 
 if ( ! empty( $slider ) ) :
 	?>

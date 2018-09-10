@@ -18,10 +18,18 @@ function endpoint_setup() {
 function atu_register_video_endpoint() {
 	register_rest_route(
 		'atu/v1',
-		'/more',
+		'/videos',
 		array(
 			'methods'  => \WP_REST_Server::READABLE,
 			'callback' => __NAMESPACE__ . '\get_videos',
+			'args'     => [
+				'page' => [
+					'required' => true,
+				],
+				'per_page' => [
+					'required' => true,
+				],
+			],
 		)
 	);
 }

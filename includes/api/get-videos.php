@@ -11,11 +11,10 @@ use ATU\Theme\Views;
 use ATU\Theme\Cache;
 
 function get_videos( $request ) {
-	$page     = $request->get_param( 'page' );
-	$per_page = $request->get_param( 'per_page' );
-	$html     = '';
+	$args = $request->get_params();
+	$html = '';
 
-	$posts = Cache\get_videos_query( $per_page, '', $page );
+	$posts = Cache\get_videos_query( $args['per_page'], '', $args['page'] );
 
 	$videos = array_map(
 		function( $video ) {

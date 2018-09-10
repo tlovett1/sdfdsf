@@ -23,6 +23,7 @@ function get_events_query() {
 		'update_post_term_cache' => false,
 		'order'                  => 'ASC',
 		'orderby'                => 'menu_order',
+		'update_term_meta_cache' => true,
 	];
 
 	$events = new \WP_Query( $args );
@@ -31,7 +32,7 @@ function get_events_query() {
 		return false;
 	}
 
-	return $events->posts;
+	return $events;
 }
 
 
@@ -42,7 +43,6 @@ function get_events_query() {
  * @return array Returns an array of events post types and their post meta.
  */
 function get_events_meta( $events_id ) {
-	$post_meta = get_post_meta( $events_id );
 
 	return [
 		'ID'       => $events_id,
@@ -65,7 +65,10 @@ function get_events() {
 		return false;
 	}
 
-	return array_map( function ( $event ) {
-		return get_events_meta( $event->ID );
-	}, $events );
+	return array_map(
+		function ( $event ) {
+			return get_events_meta( $event->ID );
+		},
+		$events->posts
+	);
 }

@@ -4,7 +4,7 @@ export default () => {
   const totalSlides = wrapper.querySelector('.total-slides');
   const slide = wrapper.querySelector('.current-slide');
 
-  if (!slider) {
+  if (!slider && !wrapper) {
     return false;
   }
 

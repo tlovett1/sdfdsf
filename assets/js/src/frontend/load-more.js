@@ -18,7 +18,7 @@ export default () => {
     loadMoreButton.addEventListener('click', () => {
       const endpoint = `${
         ATU.siteUrl
-      }/wp-json/atu/v1/more?per_page=3&page=${page}`;
+      }/wp-json/atu/v1/videos?per_page=3&page=${page}`;
 
       fetch(endpoint)
         .then(response => response.json())

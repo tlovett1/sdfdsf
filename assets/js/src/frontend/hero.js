@@ -6,9 +6,7 @@ export default () => {
   if (!hero) {
     return false;
   }
-  const sliderContainer = document.querySelectorAll(
-    '.hero-slider-container',
-  )[0];
+  const sliderContainer = document.querySelector('.hero-slider-container');
   const images = document.querySelectorAll('.comparison-image');
 
   function Init() {
