@@ -5,6 +5,7 @@
 ?>
 
 <div class="section-intro">
+	<div class="triangle"></div>
 	<div class="heading-container-border heading-container-border--image">
 		<?php
 		echo wp_kses_post( Helpers\heading( $settings['subheading'], '', 'eventsIntroSubHeading', '', '', $settings['image'] ) );

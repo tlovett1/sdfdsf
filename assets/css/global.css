@@ -180,8 +180,7 @@ body {
     border-right: 350px solid var(--darkGrey); 
     position: absolute;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: -25%;
     display: block;
 
     @media(max-width: 899px) {

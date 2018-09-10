@@ -11,6 +11,7 @@ use ATU\Theme\Helpers;
 if ( Helpers\value_exists( $settings, 'heading') ) :
 	?>
 	<div class="section" data-aos="fade-up"  data-aos-duration="3000">
+		<div class="triangle"></div>
 		<div class="container">
 			<div class="section-intro">
 				<div class="heading-container-border">
