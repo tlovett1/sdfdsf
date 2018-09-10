@@ -12,6 +12,7 @@ require_once 'events-model.php';
  * @param [string] $key An model key you want.
  * @return array|string array if no $key is passed, or the model key if a $key is passed.
  */
-function get_meta_key_value( $keys, $key ) {
-	return ( $key ) ? $keys[ $key ]['key'] : $keys;
+function get_meta_key_value($keys, $key)
+{
+    return ($key) ? $keys[ $key ]['key'] : $keys;
 }

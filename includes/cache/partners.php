@@ -14,24 +14,25 @@ use ATU\Theme\IA;
  *
  * @return array of partners custom post type
  */
-function get_partners_query() {
-	$args = [
-		'post_type'              => IA\get_type_partners(),
-		'no_found_rows'          => true,
-		'update_post_meta_cache' => false,
-		'posts_per_page'         => 100,
-		'update_post_term_cache' => false,
-		'order'                  => 'ASC',
-		'orderby'                => 'menu_order',
-	];
+function get_partners_query()
+{
+    $args = [
+        'post_type'              => IA\get_type_partners(),
+        'no_found_rows'          => true,
+        'update_post_meta_cache' => false,
+        'posts_per_page'         => 100,
+        'update_post_term_cache' => false,
+        'order'                  => 'ASC',
+        'orderby'                => 'menu_order',
+    ];
 
-	$partners = new \WP_Query( $args );
+    $partners = new \WP_Query($args);
 
-	if ( is_wp_error( $partners ) || ! $partners->have_posts() ) {
-		return false;
-	}
+    if (is_wp_error($partners) || ! $partners->have_posts()) {
+        return false;
+    }
 
-	return $partners->posts;
+    return $partners->posts;
 }
 
 
@@ -41,16 +42,17 @@ function get_partners_query() {
  * @param [int] $partners_id is the WP post id.
  * @return array Returns an array of company post types and their post meta.
  */
-function get_partners_meta( $partners_id ) {
-	$post_meta  = get_post_meta( $partners_id );
+function get_partners_meta($partners_id)
+{
+    $post_meta  = get_post_meta($partners_id);
 
 
-	return [
-		'ID'        => $partners_id,
-		'title'     => get_the_title( $partners_id ),
-		'image'     => get_the_post_thumbnail_url( $partners_id, 'full' ),
-		'url'       => get_post_meta( $partners_id, IA\get_partners_model_keys( 'url' ), true ),
-	];
+    return [
+        'ID'        => $partners_id,
+        'title'     => get_the_title($partners_id),
+        'image'     => get_the_post_thumbnail_url($partners_id, 'full'),
+        'url'       => get_post_meta($partners_id, IA\get_partners_model_keys('url'), true),
+    ];
 }
 
 /**
@@ -59,16 +61,15 @@ function get_partners_meta( $partners_id ) {
  *
  * @return array If company posts do exist then it will return an array of the posts with their post meta, otherwise it will return false.
  */
-function get_partners() {
-	$partners = get_partners_query();
+function get_partners()
+{
+    $partners = get_partners_query();
 
-	if ( empty( $partners ) ) {
-		return false;
-	}
+    if (empty($partners)) {
+        return false;
+    }
 
-	return array_map( function( $partner ) {
-
-		return get_partners_meta( $partner->ID );
-
-	}, $partners );
+    return array_map(function ($partner) {
+        return get_partners_meta($partner->ID);
+    }, $partners);
 }

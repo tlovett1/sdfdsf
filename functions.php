@@ -10,8 +10,8 @@
  *
  * @package Develop With WP
  * @since 0.1.0
- * 
- * 
+ *
+ *
  */
 
 
@@ -22,36 +22,34 @@ use ATU\Theme\Metaboxes;
 use ATU\Theme\Endpoints;
 use ATU\Theme\GravityForms;
 
-
 // Useful global constants.
-define( 'ATU_VERSION', '1.0.0' );
-define( 'ATU_URL', get_stylesheet_directory_uri() );
-define( 'ATU_TEMPLATE_URL', get_template_directory_uri() );
-define( 'ATU_PATH', get_template_directory() . '/' );
-define( 'ATU_INC', ATU_PATH . 'includes/' );
+define('ATU_VERSION', '1.0.0');
+define('ATU_URL', get_stylesheet_directory_uri());
+define('ATU_TEMPLATE_URL', get_template_directory_uri());
+define('ATU_PATH', get_template_directory() . '/');
+define('ATU_INC', ATU_PATH . 'includes/');
 
-if ( file_exists( ATU_PATH . 'vendor/autoload.php' ) ) {
-	require ATU_PATH . 'vendor/autoload.php';
+if (file_exists(ATU_PATH . 'vendor/autoload.php')) {
+    require ATU_PATH . 'vendor/autoload.php';
 
-	\AaronHolbrook\Autoload\autoload( ATU_INC );
-	\AaronHolbrook\Autoload\autoload( ATU_PATH . 'views' );
+    \AaronHolbrook\Autoload\autoload(ATU_INC);
+    \AaronHolbrook\Autoload\autoload(ATU_PATH . 'views');
 
-	// Run the setup functions.
-	ATU\Theme\Core\setup();
-	GravityForms\test_setup();
-	Endpoints\endpoint_setup();
-	Metaboxes\partners_setup();
-	Metaboxes\video_setup();
-	Metaboxes\events_setup();
-	Customizer\setup();
-	Customizer\hero_setup();
-	Customizer\about_setup();
-	Customizer\events_setup();
-	Customizer\testimonials_setup();
-	Customizer\media_setup();
-	Customizer\contact_setup();
-	Customizer\form_setup();
-	Customizer\social_page_setup();
-	Customizer\footer_setup();
+    // Run the setup functions.
+    ATU\Theme\Core\setup();
+    GravityForms\test_setup();
+    Endpoints\endpoint_setup();
+    Metaboxes\partners_setup();
+    Metaboxes\video_setup();
+    Metaboxes\events_setup();
+    Customizer\setup();
+    Customizer\hero_setup();
+    Customizer\about_setup();
+    Customizer\events_setup();
+    Customizer\testimonials_setup();
+    Customizer\media_setup();
+    Customizer\contact_setup();
+    Customizer\form_setup();
+    Customizer\social_page_setup();
+    Customizer\footer_setup();
 }
-

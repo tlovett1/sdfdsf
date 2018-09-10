@@ -7,8 +7,9 @@ namespace ATU\Theme\IA;
  * @return string returns the string name used with register_post_type to create
  * a post type.
  */
-function get_type_partners() {
-	return 'atu_partners';
+function get_type_partners()
+{
+    return 'atu_partners';
 }
 
 /**
@@ -17,8 +18,9 @@ function get_type_partners() {
  * @return string returns the string name used with register_post_type to create
  * a post type.
  */
-function get_type_videos() {
-	return 'atu_videos';
+function get_type_videos()
+{
+    return 'atu_videos';
 }
 
 
@@ -28,6 +30,7 @@ function get_type_videos() {
  * @return string returns the string name used with register_post_type to create
  * a post type.
  */
-function get_type_events() {
-	return 'atu_events';
+function get_type_events()
+{
+    return 'atu_events';
 }

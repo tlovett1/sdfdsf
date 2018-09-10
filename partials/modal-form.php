@@ -1,6 +1,7 @@
 <?php
-	use ATU\Theme\Helpers;
-	$settings = get_theme_mod( 'form_settings' );
+    use ATU\Theme\Helpers;
+
+$settings = get_theme_mod('form_settings');
  ?>
 <div id="modal" class="modal form">
 	<div class="close">
@@ -15,19 +16,19 @@
 				<div class="form-intro">
 					<div class="section-intro">
 						<div class="heading-container">
-							<?php echo Helpers\heading( $settings['subheading'], $settings['heading'],  'contactSubHeading', 'contactHeading') ?>
+							<?php echo Helpers\heading($settings['subheading'], $settings['heading'], 'contactSubHeading', 'contactHeading') ?>
 						</div>
 					</div>
-					<?php if ( Helpers\value_exists( $settings, 'description' ) ) : ?>
+					<?php if (Helpers\value_exists($settings, 'description')) : ?>
 						<p class="section-description">
-							<?php echo esc_html( $settings['description'] ); ?>
+							<?php echo esc_html($settings['description']); ?>
 						</p>
 					<?php endif; ?>
 				</div>
 					<?php
-					if ( Helpers\value_exists( $settings, 'id' ) ) :
-						echo gravity_form( $settings['id'], false, false, true, '', false );
-					endif; ?>
+                    if (Helpers\value_exists($settings, 'id')) :
+                        echo gravity_form($settings['id'], false, false, true, '', false);
+                    endif; ?>
 				</div>
 
 			</div>

@@ -1,4 +1,6 @@
-<?php use ATU\Theme\Helpers; ?>
+<?php use ATU\Theme\Helpers;
+
+?>
 <div id="modalVideo" class="modal video">
 	<div class="modal-wrapper">
 		<div class="modal-content-wrapper">
