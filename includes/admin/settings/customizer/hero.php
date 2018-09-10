@@ -28,6 +28,7 @@ function hero_setup() {
 function hero( WP_Customize_Manager $manager  ) {
 	$manager->add_section( 'hero_section', [
 		'title' => esc_html__( 'Hero', 'atu' ),
+		'priority' => 10,
 	]);
 
 	$manager->add_setting( 'hero_settings_slide1[subheading]', [

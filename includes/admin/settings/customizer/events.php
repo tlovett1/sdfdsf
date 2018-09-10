@@ -31,7 +31,8 @@ function events_setup() {
  */
 function events_panel( WP_Customize_Manager $manager ) {
 	$manager->add_panel( EVENTS_PANEL, [
-		'title' => esc_html__( 'Events Settings', 'atu' ),
+		'title' => esc_html__( 'Events', 'atu' ),
+		'priority' => 30,
 	] );
 }
 

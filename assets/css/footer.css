@@ -234,11 +234,11 @@
 
 
 .footer-slider-item {
-    margin: 0 10px;
+    margin: 0 auto;
     display: block;
 
     @media(--tablet) {
-        width: 150px;
+        width: 100px;
     }
 
     img {

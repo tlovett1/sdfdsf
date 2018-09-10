@@ -36,22 +36,24 @@ use ATU\Theme\Views;
 	</head>
 	<body <?php body_class(); ?>>
 	<header id="siteHeader" class="site-header">
-		<div id="siteMenu" class="site-header-menu">
-			<button id="menuButton" class="menu-button">
-				<span></span>
-				<span></span>
-				<span></span>
-			</button>
-			<?php
-				wp_nav_menu( array( 'theme_location' => 'header-left', 'depth' => 1 ) );
-			?>
-			<h1 class="logo">
+		<div class="container">
+			<div id="siteMenu" class="site-header-menu">
+				<button id="menuButton" class="menu-button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
 				<?php
-					echo Helpers\get_image_element( get_theme_mod( 'atu_logo_setting' ), 'siteLogo', 'site-logo' );
+					wp_nav_menu( array( 'theme_location' => 'header-left', 'depth' => 1 ) );
 				?>
-			</h1>
-			<?php
-				wp_nav_menu( array( 'theme_location' => 'header-right', 'depth' => 1 ) );
-			?>
+				<h1 class="logo">
+					<?php
+						echo Helpers\get_image_element( get_theme_mod( 'atu_logo_setting' ), 'siteLogo', 'site-logo' );
+					?>
+				</h1>
+				<?php
+					wp_nav_menu( array( 'theme_location' => 'header-right', 'depth' => 1 ) );
+				?>
+			</div>
 		</div>
 	</header>

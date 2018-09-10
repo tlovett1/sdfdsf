@@ -6,6 +6,7 @@ $footer = get_theme_mod( 'footer_settings' );
 //
 ?>
 	<footer class="footer">
+		<div data-aos="fade-up"  data-aos-duration="3000"> 
 		<div class="footer-top">
 			<div class="section-intro section">
 				<div class="footer-background-image"  style="background-image:url(<?php echo esc_url( wp_get_attachment_url($footer['image']) );?>)"></div>
@@ -43,6 +44,7 @@ $footer = get_theme_mod( 'footer_settings' );
 					<a href="http://www.crossfield.com" class="footer-crossfield-link">Site By Crossfield</a>
 				</div>
 			</div>
+		</div>
 		</div>
 	</footer>
 	<?php wp_footer(); ?>

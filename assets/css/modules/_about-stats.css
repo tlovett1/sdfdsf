@@ -143,10 +143,9 @@
     @media(--tablet) {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-50%) translateZ(0) !important;
         margin-bottom: 0;
     }
-
 
     .about-stats-image {
         width: 45%;

@@ -31,7 +31,8 @@ function about_setup() {
  */
 function about_panel( WP_Customize_Manager $manager ) {
 	$manager->add_panel( ABOUT_PANEL, [
-		'title' => esc_html__( 'About Settings', 'atu' ),
+		'title' => esc_html__( 'About', 'atu' ),
+		'priority' => 20,
 	] );
 }
 
@@ -265,6 +266,18 @@ function about_list( WP_Customize_Manager $manager  ) {
 		'section' => 'about_list_section',
 		'type'    => 'text',
 	]);
+
+	$manager->add_setting( 'about_lists_settings[image]', [
+		'type'      => 'theme_mod',
+		'transport' => 'postMessage',
+	] );
+
+	$manager->add_control( new WP_Customize_Media_Control( $manager, 'about_lists_settings[image]', [
+		'label'       => esc_html__( 'Background Image', 'atu' ),
+		'section'     => 'about_list_section',
+		'settings'    => 'about_lists_settings[image]',
+		'description' => esc_html__( 'Select or Upload the image you wish to display.', 'atu' ),
+	] ) );
 
 	$manager->add_setting( 'about_lists_settings_repeater', array(
         'sanitize_callback' => 'customizer_repeater_sanitize'

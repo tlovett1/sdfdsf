@@ -25,6 +25,7 @@ function media_setup() {
 function media( WP_Customize_Manager $manager  ) {
 	$manager->add_section( 'media_section', [
 		'title' => esc_html__( 'Media', 'atu' ),
+		'priority' => 40,
 	]);
 
 	$manager->add_setting( 'media_settings[subheading]', [

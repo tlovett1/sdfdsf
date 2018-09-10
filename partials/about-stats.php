@@ -5,7 +5,7 @@
 <div class="about-stats">
 	<div class="about-stats-container">
 		<?php  if ( isset( $settings[ 'stat1' ][ 'image' ] ) && ! empty( $settings[ 'stat1' ][ 'image' ] ) ) :  ?>
-			<div class="about-stats-item">
+			<div class="about-stats-item" data-aos="fade-up"  data-aos-duration="3000">
 				<div class="about-stats-image">
 					<?php echo Helpers\get_image_element(  $settings[ 'stat1' ][ 'image' ] , '', 'about-stat1');?>
 				</div>
@@ -29,7 +29,7 @@
 		<?php endif;
 		if ( isset( $settings[ 'stat2' ][ 'image' ] ) && ! empty( $settings[ 'stat2' ][ 'image' ] ) ) :
 		?>
-		<div class="about-stats-item about-stats-item--second">
+		<div class="about-stats-item about-stats-item--second" data-aos="fade-up"  data-aos-duration="3000">
 			<div class="about-stats-image">
 				<?php echo Helpers\get_image_element(  $settings[ 'stat2' ][ 'image' ] , '', 'about-stat2');?>
 			</div>
@@ -53,7 +53,7 @@
 		<?php endif;
 		if ( isset( $settings[ 'stat3' ][ 'image' ] ) && ! empty( $settings[ 'stat3' ][ 'image' ] ) ) :
 		?>
-		<div class="about-stats-item  about-stats-item--third">
+		<div class="about-stats-item  about-stats-item--third" data-aos="fade-up"  data-aos-duration="3000" data-aos-delay="300">
 			<div class="about-stats-image">
 				<?php echo Helpers\get_image_element(  $settings[ 'stat3' ][ 'image' ] , '', 'about-stat3');?>
 			</div>

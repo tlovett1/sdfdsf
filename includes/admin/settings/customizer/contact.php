@@ -27,6 +27,7 @@ function contact_setup() {
 function contact( WP_Customize_Manager $manager  ) {
 	$manager->add_section( 'contact_section', [
 		'title' => esc_html__( 'Contact', 'atu' ),
+		'priority' => 50,
 	]);
 
 	$manager->add_setting( 'contact_settings[subheading]', [

@@ -3,7 +3,6 @@ export default () => {
   const buttons = document.querySelectorAll('.form-button');
   const close = modal.querySelector('.modal-close');
   const body = document.getElementsByTagName('body')[0];
-  const modalContent = modal.querySelector('.modal-content');
 
   if (buttons.length <= 0) {
     return false;

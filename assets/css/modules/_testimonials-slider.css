@@ -8,8 +8,11 @@
 
     @media(--tablet) {
         max-width: 930px;
-        margin: 0 auto;
+        margin: 0 auto 40px;
         padding: 0 170px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
     }
 
     .heading-container {
@@ -19,6 +22,43 @@
             margin: 0 0 40px 0;
         }
     }
+}
+
+.slider-counter {
+    display: none;
+    flex-direction: column;
+
+    @media(--tablet) {
+        display: flex;
+    }
+}
+
+.current-slide {
+    font-family: var(--roboto);
+    font-size: 55px;
+    font-weight: 700;
+    color: #666666;
+    position: relative;
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        bottom: 0;
+        right: 0;
+        background-color: var(--green);
+    }
+}
+
+.total-slides {
+    font-family: var(--condensed);
+    font-size: 18px;
+    font-weight: 700;
+    color: #666666;
+    text-align: right;
+    padding-top: 5px;
 }
 
 .testimonials-slider-wrapper {

@@ -10,7 +10,7 @@
 	</div>
 	<p id="eventsIntroText" class="text">
 		<?php if ( Helpers\value_exists( $settings, 'text' ) ) :
-		echo esc_html( $settings['text'] );
+			echo esc_html( $settings['text'] );
 		endif; ?>
 	</p>
 </div>

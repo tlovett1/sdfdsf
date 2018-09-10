@@ -87,6 +87,13 @@ function scripts() {
 		ATU_VERSION
 	);
 
+	wp_enqueue_style(
+		'aos-css',
+		ATU_URL . '/assets/css/vendor/aos.css',
+		array(),
+		ATU_VERSION
+	);
+
 	function enqueue_customizer_scripts() {
 		wp_enqueue_script(
 			'atu_theme-customizer',
