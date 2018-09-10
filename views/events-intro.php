@@ -15,19 +15,20 @@ use ATU\Theme\Cache;
  *
  * @return HTML return the mark up for the Events Intro List.
  */
-function build_events_intro_list()
-{
-    $lists = get_customizer_values('events_lists_settings_repeater');
+function build_events_intro_list() {
+	$lists = get_customizer_values( 'events_lists_settings_repeater' );
 
-    if (empty($lists)) {
-        return false;
-    }
-    ob_start(); ?>
+	if ( empty( $lists ) ) {
+		return false;
+	}
+	ob_start(); ?>
 	<ul class="events-intro-list">
-		<?php foreach ($lists as $listItem) : ?>
-			<li class="events-intro-list-item"><?php echo esc_html($listItem['text']); ?></li>
+		<?php
+		foreach ( $lists as $list_item ) :
+			?>
+			<li class="events-intro-list-item"><?php echo esc_html( $list_item['text'] ); ?></li>
 		<?php endforeach; ?>
 	</ul>
 	<?php
-    return ob_get_clean();
+	return ob_get_clean();
 }
