@@ -1,10 +1,10 @@
 import gumshoe from 'gumshoejs';
-import SmoothScroll from 'smooth-scroll';
+// import SmoothScroll from 'smooth-scroll';
 
 export default () => {
-  SmoothScroll('.menu-item a[href*="#"]', {
-    header: 'header',
-  });
+  // SmoothScroll('.menu-item a[href*="#"]', {
+  //   header: 'header',
+  // });
 
   gumshoe.init({
     selector: '.menu-item a[href*="#"]',

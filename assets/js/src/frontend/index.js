@@ -14,7 +14,6 @@ import registerAnimation from './animation';
 document.addEventListener('DOMContentLoaded', () => {
   registerHeader();
   registerMenu();
-  registerSmoothScroll();
   registerEventsSlider();
   registerTestimonialsSlider();
   registerLoadMore();
@@ -23,4 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
   registerHero();
   registerFormModal();
   registerAnimation();
+  registerSmoothScroll();
 });
