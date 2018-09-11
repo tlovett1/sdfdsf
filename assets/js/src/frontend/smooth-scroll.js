@@ -1,11 +1,4 @@
-import gumshoe from 'gumshoejs';
-import SmoothScroll from 'smooth-scroll';
-
-export default () => {
-  SmoothScroll('.menu-item a[href*="#"]', {
-    header: 'header',
-  });
-
+document.addEventListener('DOMContentLoaded', () => {
   gumshoe.init({
     selector: '.menu-item a[href*="#"]',
     selectorHeader: 'header',
@@ -13,4 +6,4 @@ export default () => {
     activeClass: 'active',
     scrollDelay: false,
   });
-};
+});

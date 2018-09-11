@@ -1,6 +1,6 @@
+import SmoothScroll from 'smooth-scroll';
 import baseCSS from '../../../css/index.css'; // eslint-disable-line no-unused-vars
 import registerMenu from './menu';
-import registerSmoothScroll from './smooth-scroll';
 import registerFooter from './footer-slider';
 import registerEventsSlider from './events-slider';
 import registerTestimonialsSlider from './testimonials-slider';
@@ -22,5 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   registerHero();
   registerFormModal();
   registerAnimation();
-  registerSmoothScroll();
+
+  SmoothScroll('.menu-item a[href*="#"]', {
+    header: 'header',
+  });
 });

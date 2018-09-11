@@ -79,6 +79,22 @@ function scripts() {
 		ATU_VERSION
 	);
 
+	wp_enqueue_script(
+		'gumshoe-js',
+		ATU_TEMPLATE_URL . '/assets/js/vendor/gumshoe.js',
+		array( 'jquery' ),
+		ATU_VERSION,
+		true
+	);
+
+	wp_enqueue_script(
+		'smooth-scroll',
+		ATU_TEMPLATE_URL . '/assets/js/src/frontend/smooth-scroll.js',
+		array( 'gumshoe-js' ),
+		ATU_VERSION,
+		true
+	);
+
 	wp_enqueue_style(
 		'imageComparison-css',
 		ATU_URL . '/assets/css/vendor/imageComparison.css',
