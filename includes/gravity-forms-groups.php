@@ -110,7 +110,11 @@ function field_group_default_labels() {
 	<?php
 }
 
-
+/**
+ * Injects javascript to the gravity form editor page
+ *
+ * @return void
+ */
 function allow_fieldgroup_settings() {
 	?>
 	<script type='text/javascript'>
