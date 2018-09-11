@@ -36,7 +36,7 @@ function setup() {
 function scripts() {
 	wp_enqueue_script(
 		'atu_theme-js',
-		'https://atu.crxssfield.com/wp-content/themes/atu-theme/assets/test.js',
+		get_stylesheet_directory_uri() . '/dist/frontend.bundle.js',
 		array( 'jquery' ),
 		ATU_VERSION,
 		true
