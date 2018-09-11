@@ -1,4 +1,10 @@
 <?php
+/**
+ * File contains the home page customizer controls;
+ *
+ * @package atu-theme
+ */
+
 namespace ATU\Theme\Customizer;
 
 use WP_Customize_Manager;
@@ -36,14 +42,16 @@ function remove_front_page_panel( WP_Customize_Manager $manager ) {
  */
 function theme_logo( WP_Customize_Manager $manager ) {
 	$manager->add_setting(
-		'atu_logo_setting', [
+		'atu_logo_setting',
+		[
 			'type' => 'theme_mod',
 		]
 	);
 
 	$manager->add_control(
 		new WP_Customize_Media_Control(
-			$manager, 'atu_logo_setting',
+			$manager,
+			'atu_logo_setting',
 			array(
 				'label'    => esc_html( 'Upload Logo', 'atu' ),
 				'section'  => 'title_tagline',
@@ -52,11 +60,3 @@ function theme_logo( WP_Customize_Manager $manager ) {
 		)
 	);
 }
-
-
-
-
-
-
-
-

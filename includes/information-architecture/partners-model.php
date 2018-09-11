@@ -11,7 +11,7 @@ namespace ATU\Theme\IA;
 function get_partners_model_keys( $key = false ) {
 	$prefix = 'atu_partners';
 	$keys   = [
-		'url'   => [
+		'url' => [
 			'key'   => sprintf( '%s_url', $prefix ),
 			'label' => esc_html__( 'Url', 'atu' ),
 		],

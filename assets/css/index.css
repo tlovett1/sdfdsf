@@ -7,12 +7,22 @@
 @import './font-family.css';
 @import './header.css';
 @import './footer.css';
-/* @import './footer.css'; */
+@import './button.css';
+
 
 /* Modules */
 @import './modules/_menu.css';
-@import './modules/_about.css';
+@import './modules/_about-intro.css';
+@import './modules/_about-stats.css';
 @import './modules/_about-lists.css';
 @import './modules/_events-intro.css';
 @import './modules/_events-slider.css';
+@import './modules/_events-list.css';
+@import './modules/_testimonials-slider.css';
+@import './modules/_contact-intro.css';
+@import './modules/_contact-row.css';
+@import './modules/_media.css';
 @import './modules/_hero.css';
+@import './modules/_modal.css';
+@import './modules/_application-form.css';
+

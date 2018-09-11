@@ -31,7 +31,7 @@ function get_partners_query() {
 		return false;
 	}
 
-	return $partners->posts;
+	return $partners;
 }
 
 
@@ -42,14 +42,12 @@ function get_partners_query() {
  * @return array Returns an array of company post types and their post meta.
  */
 function get_partners_meta( $partners_id ) {
-	$post_meta  = get_post_meta( $partners_id );
-
 
 	return [
-		'ID'        => $partners_id,
-		'title'     => get_the_title( $partners_id ),
-		'image'     => get_the_post_thumbnail_url( $partners_id, 'full' ),
-		'url'       => get_post_meta( $partners_id, IA\get_partners_model_keys( 'url' ), true ),
+		'ID'    => $partners_id,
+		'title' => get_the_title( $partners_id ),
+		'image' => get_the_post_thumbnail_url( $partners_id, 'full' ),
+		'url'   => get_post_meta( $partners_id, IA\get_partners_model_keys( 'url' ), true ),
 	];
 }
 
@@ -66,9 +64,10 @@ function get_partners() {
 		return false;
 	}
 
-	return array_map( function( $partner ) {
-
-		return get_companies_meta( $partner->ID );
-
-	}, $partners );
+	return array_map(
+		function ( $partner ) {
+			return get_partners_meta( $partner->ID );
+		},
+		$partners->posts
+	);
 }

@@ -1,14 +1,17 @@
 <?php
+/**
+ * File contains for the social media customizer controls;
+ *
+ * @package atu-theme
+ */
 
 namespace ATU\Theme\Customizer;
-
 
 use WP_Customize_Manager;
 use WP_Customize_Media_Control;
 use ATU\Theme\Views;
 
 use Customizer_Repeater;
-
 
 /**
  * Sets up all customizer integrations
@@ -29,7 +32,8 @@ function social_settings( $wp_customize ) {
 	$social_sites = Views\atu_social_array();
 
 	$wp_customize->add_section(
-		'social_section', array(
+		'social_section',
+		array(
 			'title'       => __( 'Social Network Settings' ),
 			'description' => __( 'Add the username for each of your social profiles.' ),
 		)
@@ -39,13 +43,15 @@ function social_settings( $wp_customize ) {
 		$label = ucfirst( $social_site );
 
 		$wp_customize->add_setting(
-			$social_site, array(
+			$social_site,
+			array(
 				'transport' => 'postMessage',
 			)
 		);
 
 		$wp_customize->add_control(
-			$social_site, array(
+			$social_site,
+			array(
 				'type'    => 'text',
 				'label'   => $label,
 				'section' => 'social_section',

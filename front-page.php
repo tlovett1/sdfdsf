@@ -4,6 +4,7 @@
  *
  * @package atu-theme
  */
+
 use ATU\Theme\Helpers;
 use ATU\Theme\Views;
 
@@ -11,37 +12,64 @@ use ATU\Theme\Views;
 get_header()?>
 <?php if ( have_posts() ) : ?>
 	<main class="page-wrapper">
-		<div id="home" class="hero">
-			<img src="https://via.placeholder.com/1436x960?text=Hello+World">
+		<div id="home" class="hero-wrapper">
+			<?php echo esc_html( get_template_part( 'partials/hero', 'hero' ) ); ?>
 		</div>
-		<!-- ABOUT SECTION -->
-		<div id="about" class="about-container">
-			<!-- <div class="triangle"></div> -->
-			<div class="section">
-				<?php
-					echo get_template_part( 'partials/about', 'intro' );
-				?>
-			</div>
-			<div class="about-list-section section"  style="background-image:url(https://placeimg.com/343/537/arch)">
-				<div class="about-lists-container container">
-					<?php echo get_template_part( 'partials/about', 'lists' ); ?>
-				</div>
 
+		<div id="about" class="about-container">
+			<?php
+				echo get_template_part( 'partials/about', 'intro' );
+				echo get_template_part( 'partials/about', 'stats' );
+				echo get_template_part( 'partials/about', 'lists' );
+			?>
+		</div>
+		<div id="events" class="events-container">
+			<div class="section" data-aos="fade-up"  data-aos-duration="3000">
+				<div class="container">
+					<?php
+						echo get_template_part( 'partials/events', 'intro' );
+						echo Views\build_events_intro_list();
+						echo Helpers\button( 'Apply', 'form-button' );
+					?>
+				</div>
+			</div>
+			<?php
+				echo Views\build_events_slider();
+				echo get_template_part( 'partials/testimonials', 'slider' );
+			?>
+			<div class="events-schedule section">
+				<div class="events-list-container" data-aos="fade-up"  data-aos-duration="3000">
+					<?php
+						echo get_template_part( 'partials/events', 'list' );
+						echo Views\build_events_list();
+					?>
+				</div>
 			</div>
 		</div>
-		<!-- ABOUT SECTION -->
-		<!-- EVENT SECTION -->
-		<div id="events" class="events-container">
-			<div class="section">
+
+		<div id="media" class="section media-section">
+			<?php echo get_template_part( 'partials/media', 'media' ); ?>
+			<div class="container" data-aos="fade-up"  data-aos-duration="3000">
 				<?php
-					echo get_template_part( 'partials/events', 'intro' );
-					echo Views\build_events_intro_list();
-					echo Helpers\button( 'Apply', '', 'test')
+					echo Views\build_videos();
+					echo Helpers\button( 'Load More', 'white', 'loadmore' );
 				?>
 			</div>
-			<?php echo Views\build_events_slider();?>
 		</div>
-		<!-- EVENT SECTION -->
+
+		<div id="contact" class="contact-section section">
+			<div class="contact-container" data-aos="fade-up" data-aos-duration="4000">
+				<?php
+					echo get_template_part( 'partials/contact', 'intro' );
+					echo Views\build_contact_row();
+				?>
+			</div>
+		</div>
+
+		<?php
+			echo get_template_part( 'partials/modal', 'video' );
+			echo get_template_part( 'partials/modal', 'form' );
+		?>
 	</main>
 <?php endif; ?>
 <?php get_footer(); ?>

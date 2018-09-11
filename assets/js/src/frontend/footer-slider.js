@@ -1,11 +1,13 @@
 export default () => {
-  const slider = document.querySelectorAll('#footerSlider');
+  const wrapper = document.getElementById('footerSliderWrapper');
+  const slider = document.getElementById('footerSlider');
+
   if (!slider) {
     return false;
   }
 
-  const rightArrow = document.querySelector('.prev');
-  const leftArrow = document.querySelector('.next');
+  const rightArrow = wrapper.querySelector('.prev');
+  const leftArrow = wrapper.querySelector('.next');
 
   jQuery(slider).slick({
     infinite: true,

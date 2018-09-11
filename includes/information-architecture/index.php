@@ -2,6 +2,8 @@
 namespace ATU\Theme\IA;
 
 require_once 'partners-model.php';
+require_once 'videos-model.php';
+require_once 'events-model.php';
 /**
  * Helper function which makes it easy to get a post meta key by its short
  * name defined in the model.

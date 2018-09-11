@@ -11,16 +11,20 @@ namespace ATU\Theme\Core;
  * @return void
  */
 function setup() {
-	$n = function( $function ) {
+	$n = function ( $function ) {
 		return __NAMESPACE__ . "\\$function";
 	};
 
 	add_action( 'after_setup_theme', $n( 'i18n' ) );
 	add_action( 'admin_enqueue_scripts', $n( 'admin_scripts' ) );
 	add_action( 'wp_enqueue_scripts', $n( 'scripts' ) );
-	add_action( 'customize_controls_enqueue_scripts', $n( 'enqueue_customizer_scripts' ) );
 	add_action( 'customize_preview_init', $n( 'atu_theme_customizer_live_preview' ) );
 	add_image_size( 'event-slider', 930, 762 );
+	add_image_size( 'video-image', 340, 340 );
+	add_image_size( 'about-stat1', 725, 597 );
+	add_image_size( 'about-stat2', 416, 539 );
+	add_image_size( 'about-stat3', 454, 539 );
+	add_image_size( 'hero-image', 1436, 900 );
 }
 
 /**
@@ -33,7 +37,7 @@ function scripts() {
 	wp_enqueue_script(
 		'atu_theme-js',
 		get_stylesheet_directory_uri() . '/dist/frontend.bundle.js',
-		array('jquery'),
+		array( 'jquery' ),
 		ATU_VERSION,
 		true
 	);
@@ -47,14 +51,14 @@ function scripts() {
 
 	wp_enqueue_style(
 		'wpb-google-fonts',
-		'https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:300,400',
+		'https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:300,400,700',
 		array(),
 		ATU_VERSION
 	);
 
 	wp_localize_script(
 		'atu_theme-js',
-		'atu',
+		'ATU',
 		[
 			'siteUrl' => site_url(),
 		]
@@ -75,25 +79,34 @@ function scripts() {
 		ATU_VERSION
 	);
 
-	function enqueue_customizer_scripts() {
-		wp_enqueue_script(
-			'atu_theme-customizer',
-			ATU_TEMPLATE_URL . '/assets/js/src/admin/customizer.js',
-			array(),
-			ATU_VERSION,
-			true
-		);
-	}
-	
-	function atu_theme_customizer_live_preview() {
-		wp_enqueue_script(
-			'atu-customizer',
-			ATU_TEMPLATE_URL . '/dist/admin.bundle.js',
-			array( 'jquery', 'customize-preview' ),
-			ATU_VERSION,
-			true
-		);
-	}
+	wp_enqueue_style(
+		'imageComparison-css',
+		ATU_URL . '/assets/css/vendor/imageComparison.css',
+		array(),
+		ATU_VERSION
+	);
+
+	wp_enqueue_style(
+		'aos-css',
+		ATU_URL . '/assets/css/vendor/aos.css',
+		array(),
+		ATU_VERSION
+	);
+}
+
+/**
+ * Enqueues script for the customizer live preview
+ *
+ * @return void
+ */
+function atu_theme_customizer_live_preview() {
+	wp_enqueue_script(
+		'atu-customizer',
+		ATU_TEMPLATE_URL . '/dist/admin.bundle.js',
+		array( 'jquery', 'customize-preview' ),
+		ATU_VERSION,
+		true
+	);
 }
 
 /**

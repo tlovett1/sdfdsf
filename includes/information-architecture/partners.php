@@ -1,11 +1,15 @@
 <?php
-namespace ATU\Theme\IA;
-
 /**
  * Registers the Partner Members Custom Post Type
+ *
+ * @package atu-theme
  */
+
+namespace ATU\Theme\IA;
+
 add_action(
-	'init', function() {
+	'init',
+	function () {
 		$partner_labels = array(
 			'name'               => esc_html__( 'Partners', 'atu' ),
 			'singular_name'      => esc_html__( 'Partners', 'atu' ),

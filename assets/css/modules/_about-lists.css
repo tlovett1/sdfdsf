@@ -40,6 +40,10 @@
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+
+    @media(min-width: 880px) {
+        margin-bottom: -60px;
+    }
 }
 
 .about-list-item {

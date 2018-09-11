@@ -1,11 +1,13 @@
 export default () => {
-  const slider = document.querySelectorAll('#eventsSlider');
+  const wrapper = document.getElementById('eventsSliderWrapper');
+  const slider = document.getElementById('eventsSlider');
+
   if (!slider) {
     return false;
   }
 
-  const rightArrow = document.querySelector('.prev');
-  const leftArrow = document.querySelector('.next');
+  const rightArrow = wrapper.querySelector('.prev');
+  const leftArrow = wrapper.querySelector('.next');
 
   jQuery(slider).slick({
     infinite: true,

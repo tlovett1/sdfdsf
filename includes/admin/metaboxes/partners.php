@@ -1,4 +1,10 @@
 <?php
+/**
+ * File contains code the register metaboxes on the partners post type edit screen.
+ *
+ * @package atu-theme.
+ */
+
 namespace ATU\Theme\Metaboxes;
 
 use ATU\Theme\IA;
@@ -26,6 +32,7 @@ function register_partners_metabox() {
 		IA\get_type_partners()
 	);
 }
+
 /**
  * Function handles displaying the HTML markup for the Team Member Info metabox.
  *
@@ -43,6 +50,7 @@ function partners_meta_box_display( $post ) {
 		$model['url']['label']
 	);
 }
+
 /**
  * Function handles saving the meta fields in the Company Info Metabox.
  *

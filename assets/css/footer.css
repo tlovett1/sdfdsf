@@ -156,6 +156,7 @@
         position: absolute;
         top: 50%;
         display: none !important;
+        z-index: 2;
 
         @media(--tablet) {
             display: block !important;
@@ -233,10 +234,11 @@
 
 
 .footer-slider-item {
-    margin: 0 10px;
+    margin: 0 auto;
+    display: block;
 
     @media(--tablet) {
-        width: 150px;
+        width: 100px;
     }
 
     img {
