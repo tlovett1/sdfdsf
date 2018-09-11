@@ -9,6 +9,7 @@ import registerLoadMore from './load-more';
 import registerVideoModal from './video-modal';
 import registerFormModal from './form-modal';
 import registerHero from './hero';
+import registerAnimation from './animation';
 
 document.addEventListener('DOMContentLoaded', () => {
   registerHeader();
@@ -21,4 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
   registerFooter();
   registerHero();
   registerFormModal();
+  registerAnimation();
 });
