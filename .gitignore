@@ -3,3 +3,4 @@ vendor
 node_modules
 dist
 !assets/js/vendor
+!assets/css/vendor
