@@ -29,8 +29,7 @@
 }
 
 .application-form,
-.gform_fields,
-.application-form_wrapper {
+.gform_fields {
     background-color: var(--backgroundGrey);
     padding: 0px 30px 60px;
     margin: 0;
