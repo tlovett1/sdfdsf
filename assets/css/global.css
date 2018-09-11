@@ -13,7 +13,6 @@ body {
     &.video-modal-open,
     &.modal-open {
         overflow: hidden;
-        position: fixed;
     }
  }
 
