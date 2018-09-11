@@ -28,6 +28,7 @@
     }
 }
 
+.application-form,
 .gform_fields,
 .application-form_wrapper {
     background-color: var(--backgroundGrey);
@@ -217,6 +218,20 @@ label,
             border-radius: 50%;
         }
     }
+}
+
+.gfield_error {
+    input {
+        border-color: #c34b43;
+    }
+}
+
+.validation_error,
+.validation_message {
+    color: #c34b43;
+    font-family: var(--roboto);
+    font-size: 13px;
+    font-weight: 300;
 }
 
 textarea:invalid,

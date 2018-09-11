@@ -34,7 +34,7 @@ $settings = get_theme_mod( 'form_settings' );
 				</div>
 					<?php
 					if ( Helpers\value_exists( $settings, 'title' ) ) :
-						echo gravity_form( $settings['title'], false, false, true, '', false );
+						echo gravity_form( $settings['title'], false, false, false, '', true, 0, false );
 					endif;
 					?>
 				</div>
