@@ -87,7 +87,7 @@
 .about-list-text {
     font-family: var(--roboto);
     font-size: 16px;
-    color: var(--lightTextGrey);
+    color: #949999;
     display: block;
     line-height: 1.63;
     margin-bottom: 20px;
