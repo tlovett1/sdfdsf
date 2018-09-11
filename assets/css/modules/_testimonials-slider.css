@@ -64,6 +64,14 @@
 .testimonials-slider-wrapper {
     position: relative;
 
+    .dashed-circle {
+
+        svg {
+            width: 150px;
+            height: 196px;
+        }
+    }
+
     .prev,
     .next {
         cursor: pointer;
