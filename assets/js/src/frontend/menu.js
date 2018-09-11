@@ -28,7 +28,6 @@ export default () => {
 
     [].forEach.call(menuItems, menuItem => {
       menuItem.addEventListener('click', () => {
-        console.log('hey');
         closeMenu();
       });
     });
