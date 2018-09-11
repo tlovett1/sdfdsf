@@ -111,7 +111,6 @@
     margin-top: -10px;
     position: absolute;
     top: 50%;
-    background: url('../img/arrow.png') 0 0 no-repeat;
   }
   .comparison-control:before {
     left: -15px;

@@ -20,7 +20,7 @@ use ATU\Theme\Endpoints;
 use ATU\Theme\GravityForms;
 
 // Useful global constants.
-define( 'ATU_VERSION', '1.0.4' );
+define( 'ATU_VERSION', '1.0.5' );
 define( 'ATU_URL', get_stylesheet_directory_uri() );
 define( 'ATU_TEMPLATE_URL', get_template_directory_uri() );
 define( 'ATU_PATH', get_template_directory() . '/' );
