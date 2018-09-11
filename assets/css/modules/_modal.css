@@ -182,3 +182,7 @@
 select::-ms-expand {
     display: none;
 }
+
+.modal-open .form .modal-container {
+    margin-bottom: 200px;
+}
