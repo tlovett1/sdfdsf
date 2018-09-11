@@ -13,4 +13,6 @@ export default () => {
     activeClass: 'active',
     scrollDelay: false,
   });
+
+  console.log('gumshoe', gumshoe);
 };
