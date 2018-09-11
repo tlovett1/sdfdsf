@@ -108,6 +108,10 @@
         margin: 0 auto;
         padding-top: 80px;
     }
+
+    .form & {
+        margin-bottom: 200px;
+    }
 }
 
 .modal-close {
@@ -173,4 +177,8 @@
     .video-item & {
         display: none;
     }
+}
+
+select::-ms-expand {
+    display: none;
 }
