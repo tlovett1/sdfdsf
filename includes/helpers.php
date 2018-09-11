@@ -4,7 +4,10 @@
  *
  * @package atu-theme
  */
+
 namespace ATU\Theme\Helpers;
+
+use GFAPI;
 
 function inline_svg( $name, $force = false ) {
 	$stored_name = 'stored_svg_' . $name;
@@ -124,4 +127,19 @@ function button( $text, $class = '', $id = '' ) {
 	</button>
 	<?php
 	return ob_get_clean();
+}
+
+/**
+ * Function that pull the form titles with gravity forms api class.
+ *
+ * @return ARRAY returns an array of the form titles.
+ */
+function get_form_titles() {
+	$forms = GFAPI::get_forms();
+	$items  = [];
+
+	foreach ( $forms as $form ) :
+		$items += array( $form['title'] => $form['title'] );
+	endforeach;
+	return $items;
 }

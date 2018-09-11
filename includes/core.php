@@ -18,7 +18,6 @@ function setup() {
 	add_action( 'after_setup_theme', $n( 'i18n' ) );
 	add_action( 'admin_enqueue_scripts', $n( 'admin_scripts' ) );
 	add_action( 'wp_enqueue_scripts', $n( 'scripts' ) );
-	add_action( 'customize_controls_enqueue_scripts', $n( 'enqueue_customizer_scripts' ) );
 	add_action( 'customize_preview_init', $n( 'atu_theme_customizer_live_preview' ) );
 	add_image_size( 'event-slider', 930, 762 );
 	add_image_size( 'video-image', 340, 340 );
@@ -93,36 +92,21 @@ function scripts() {
 		array(),
 		ATU_VERSION
 	);
+}
 
-	/**
-	 * Enqueues script for the customizer
-	 *
-	 * @return void
-	 */
-	function enqueue_customizer_scripts() {
-		wp_enqueue_script(
-			'atu_theme-customizer',
-			ATU_TEMPLATE_URL . '/assets/js/src/admin/customizer.js',
-			array(),
-			ATU_VERSION,
-			true
-		);
-	}
-
-	/**
-	 * Enqueues script for the customizer live preview
-	 *
-	 * @return void
-	 */
-	function atu_theme_customizer_live_preview() {
-		wp_enqueue_script(
-			'atu-customizer',
-			ATU_TEMPLATE_URL . '/dist/admin.bundle.js',
-			array( 'jquery', 'customize-preview' ),
-			ATU_VERSION,
-			true
-		);
-	}
+/**
+ * Enqueues script for the customizer live preview
+ *
+ * @return void
+ */
+function atu_theme_customizer_live_preview() {
+	wp_enqueue_script(
+		'atu-customizer',
+		ATU_TEMPLATE_URL . '/dist/admin.bundle.js',
+		array( 'jquery', 'customize-preview' ),
+		ATU_VERSION,
+		true
+	);
 }
 
 /**

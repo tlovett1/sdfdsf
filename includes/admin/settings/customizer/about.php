@@ -117,7 +117,7 @@ function about_intro( WP_Customize_Manager $manager ) {
  * @param WP_Customize_Manager $manager Customizer Class Instance.
  * @return void
  */
-function about_stat( WP_Customize_Manager $manager ) {
+function about_stats( WP_Customize_Manager $manager ) {
 	$manager->add_section(
 		'about_stats_section',
 		[

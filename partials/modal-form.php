@@ -33,12 +33,12 @@ $settings = get_theme_mod( 'form_settings' );
 					<?php endif; ?>
 				</div>
 					<?php
-					if ( Helpers\value_exists( $settings, 'id' ) ) :
-						echo gravity_form( $settings['id'], false, false, true, '', false );
+					if ( Helpers\value_exists( $settings, 'title' ) ) :
+						echo gravity_form( $settings['title'], false, false, true, '', false );
 					endif;
 					?>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</div

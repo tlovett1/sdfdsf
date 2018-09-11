@@ -10,8 +10,11 @@ namespace ATU\Theme\Customizer;
 use WP_Customize_Manager;
 use WP_Customize_Media_Control;
 use ATU\Theme\Views;
+use ATU\Theme\Helpers;
+
 
 use Customizer_Repeater;
+
 
 /**
  * Sets up all customizer integrations
@@ -88,7 +91,7 @@ function form( WP_Customize_Manager $manager ) {
 	);
 
 	$manager->add_setting(
-		'form_settings[id]',
+		'form_settings[title]',
 		[
 			'type'      => 'theme_mod',
 			'transport' => 'postMessage',
@@ -96,11 +99,14 @@ function form( WP_Customize_Manager $manager ) {
 	);
 
 	$manager->add_control(
-		'form_settings[id]',
+		'form_settings[title]',
 		[
-			'label'   => esc_html__( 'Form Id', 'atu' ),
+			'label'   => esc_html__( 'Form Name', 'atu' ),
 			'section' => 'form_section',
-			'type'    => 'text',
+			'type'    => 'select',
+			'choices' => Helpers\get_form_titles(),
 		]
 	);
 }
+
+

@@ -8,6 +8,7 @@
 use ATU\Theme\Helpers;
 use ATU\Theme\Views;
 
+
 get_header()?>
 <?php if ( have_posts() ) : ?>
 	<main class="page-wrapper">
@@ -22,7 +23,6 @@ get_header()?>
 				echo get_template_part( 'partials/about', 'lists' );
 			?>
 		</div>
-
 		<div id="events" class="events-container">
 			<div class="section" data-aos="fade-up"  data-aos-duration="3000">
 				<div class="container">
