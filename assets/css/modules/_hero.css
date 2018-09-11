@@ -101,6 +101,23 @@
         text-align: right;
     }
 
+    .heading {
+
+        @media(--phone) {
+            font-size: 18px;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    .subheading {
+        @media(--phone) {
+            font-size: 11px;
+        }
+    }
+
     &:after {
         content: '';
         display: block;
@@ -128,6 +145,7 @@
             width: 40%;
         }
     }
+
 }
 
 .comparison-item__image {
