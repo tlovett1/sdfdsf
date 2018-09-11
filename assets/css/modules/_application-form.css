@@ -241,6 +241,7 @@ textarea {
     color: var(--darkGrey);
     background-color: #eceaea;
     padding: 0 20px;
+    border-radius: 0;
 
     &:focus {
          outline: none;
