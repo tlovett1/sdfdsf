@@ -27,10 +27,8 @@ export default () => {
     });
 
     [].forEach.call(menuItems, menuItem => {
-      const link = menuItem.querySelector('a');
-
-      link.addEventListener('click', event => {
-        event.preventDefault();
+      menuItem.addEventListener('click', () => {
+        console.log('hey');
         closeMenu();
       });
     });

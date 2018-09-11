@@ -99,6 +99,10 @@
     .heading-container {
         margin: 0 0 20px auto;
         text-align: right;
+
+        @media(--phone) {
+            width: 40%;
+        }
     }
 
     .heading {

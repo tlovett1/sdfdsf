@@ -94,7 +94,7 @@
 }
 
 .logo {
-    margin: 0 auto;
+    margin: 20px auto 0;
 
     .menu-open & {
         order: 2;
