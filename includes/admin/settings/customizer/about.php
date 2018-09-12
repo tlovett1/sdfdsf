@@ -142,7 +142,7 @@ function about_stats( WP_Customize_Manager $manager ) {
 				'label'       => esc_html__( 'Image', 'atu' ),
 				'section'     => 'about_stats_section',
 				'settings'    => 'about_stats[stat1][image]',
-				'description' => esc_html__( 'Select or Upload the image you wish to display.', 'atu' ),
+				'description' => esc_html__( 'Select or Upload the image you wish to display. Dimensions: 725 × 597.', 'atu' ),
 			]
 		)
 	);
@@ -214,7 +214,7 @@ function about_stats( WP_Customize_Manager $manager ) {
 				'label'       => esc_html__( 'Image', 'atu' ),
 				'section'     => 'about_stats_section',
 				'settings'    => 'about_stats[stat2][image]',
-				'description' => esc_html__( 'Select or Upload the image you wish to display.', 'atu' ),
+				'description' => esc_html__( 'Select or Upload the image you wish to display. Dimensions: 416 x 539.', 'atu' ),
 			]
 		)
 	);
@@ -286,7 +286,7 @@ function about_stats( WP_Customize_Manager $manager ) {
 				'label'       => esc_html__( 'Image', 'atu' ),
 				'section'     => 'about_stats_section',
 				'settings'    => 'about_stats[stat3][image]',
-				'description' => esc_html__( 'Select or Upload the image you wish to display.', 'atu' ),
+				'description' => esc_html__( 'Select or Upload the image you wish to display. Dimensions: 454 x 540.', 'atu' ),
 			]
 		)
 	);
@@ -409,7 +409,7 @@ function about_list( WP_Customize_Manager $manager ) {
 				'label'       => esc_html__( 'Background Image', 'atu' ),
 				'section'     => 'about_list_section',
 				'settings'    => 'about_lists_settings[image]',
-				'description' => esc_html__( 'Select or Upload the image you wish to display.', 'atu' ),
+				'description' => esc_html__( 'Select or Upload the image you wish to display. Dimensions: 1428 × 760.', 'atu' ),
 			]
 		)
 	);

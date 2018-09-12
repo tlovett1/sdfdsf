@@ -21,13 +21,13 @@ $settings = get_theme_mod( 'about_stats' );
 					<?php echo Helpers\inline_svg( 'circle' ); ?>
 					</div>
 					<div class="about-stats-text">
-						<span class="about-stats-heading">
+						<span id="aboutStatsHeading" class="about-stats-heading">
 							<?php echo esc_html( $settings['stat1']['heading'] ); ?>
 						</span>
-						<span class="about-stats-number">
+						<span id="aboutStatsNumber" class="about-stats-number">
 							<?php echo esc_html( $settings['stat1']['number'] ); ?>
 						</span>
-						<span class="about-stats-subheading">
+						<span id="aboutStatsLabel" class="about-stats-subheading">
 							<?php echo esc_html( $settings['stat1']['label'] ); ?>
 						</span>
 					</div>
@@ -46,13 +46,13 @@ $settings = get_theme_mod( 'about_stats' );
 					<?php echo Helpers\inline_svg( 'circle' ); ?>
 				</div>
 				<div class="about-stats-text">
-					<span class="about-stats-heading">
+					<span id="aboutStats2Heading" class="about-stats-heading">
 						<?php echo esc_html( $settings['stat2']['heading'] ); ?>
 					</span>
-					<span class="about-stats-number">
+					<span id="aboutStats2Number" class="about-stats-number">
 						<?php echo esc_html( $settings['stat2']['number'] ); ?>
 					</span>
-					<span class="about-stats-subheading">
+					<span id="aboutStats2Label" class="about-stats-subheading">
 						<?php echo esc_html( $settings['stat2']['label'] ); ?>
 					</span>
 				</div>
@@ -71,13 +71,13 @@ $settings = get_theme_mod( 'about_stats' );
 					<?php echo Helpers\inline_svg( 'circle' ); ?>
 				</div>
 				<div class="about-stats-text">
-					<span class="about-stats-heading">
+					<span id="aboutStats3Heading" class="about-stats-heading">
 						<?php echo esc_html( $settings['stat3']['heading'] ); ?>
 					</span>
-					<span class="about-stats-number">
+					<span  id="aboutStats3Number"class="about-stats-number">
 						<?php echo esc_html( $settings['stat3']['number'] ); ?>
 					</span>
-					<span class="about-stats-subheading">
+					<span id="aboutStats3Label" class="about-stats-subheading">
 						<?php echo esc_html( $settings['stat3']['label'] ); ?>
 					</span>
 				</div>
