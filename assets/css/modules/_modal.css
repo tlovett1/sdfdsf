@@ -79,10 +79,14 @@
     }
 
     .video & {
-        top: 50%;
+        top: 40%;
         transform: translate(-50%, -50%);
         height: auto;
         width: calc(100% - 40px);
+
+        @media(--tablet) {
+            top: 50%;
+        }
     }
 
     .form & {
