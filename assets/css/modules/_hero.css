@@ -16,16 +16,37 @@
         height: 28px;
         background-color: var(--green);
         transition: opacity 0.25s;
+
+        &:before {
+            width: 3px;
+            height: 16px;
+            background-color: var(--white);
+            left: 15px;
+            transform: translateY(-50%);
+            top: 50%;
+            margin-top: 0;
+        }
+
+        &:after {
+            width: 3px;
+            height: 16px;
+            background-color: var(--white);
+            right: 15px;
+            transform: translateY(-50%);
+            top: 50%;
+            margin-top: 0;
+        }
     }
 
     .comparison-control__mask {
-        width: 50px;
-        height: 28px;
-        position: absolute;
-        top: auto;
-        left: auto;
+        width: 3px;
+        height: 16px;
+        background-color: var(--white);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        z-index: 2;
         opacity: 1;
-        background-color: var(--green);
     }
 
     .comparison-separator {
