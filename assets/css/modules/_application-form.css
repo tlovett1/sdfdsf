@@ -251,7 +251,6 @@ textarea {
     transition: all 0.28s ease;
     box-shadow: none;
     font-family: var(--roboto);
-    font-weight: 300;
     color: var(--darkGrey);
     background-color: #eceaea;
     padding: 0 20px;
