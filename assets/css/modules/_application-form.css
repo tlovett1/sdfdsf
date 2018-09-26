@@ -256,7 +256,7 @@ textarea {
     background-color: #eceaea;
     padding: 0 20px;
     border-radius: 0;
-    font-size: 14px;
+    font-size: 16px;
 
     @media(--tablet) {
         font-size: 20px;
@@ -326,7 +326,7 @@ select {
     padding: 20px;
     color: #a19f9f !important;
     font-family: var(--roboto);
-    font-size: 14px;
+    font-size: 16px;
 
     @media(--tablet) {
         font-size: 20px;
