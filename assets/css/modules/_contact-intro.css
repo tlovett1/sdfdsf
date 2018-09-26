@@ -31,7 +31,6 @@
     color: var(--lightTextGrey);
 
     @media(--tablet) {
-        white-space: pre;
         margin: 0;
         font-size: 14px;
         line-height: 1.71;

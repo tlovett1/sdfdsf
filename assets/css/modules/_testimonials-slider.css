@@ -83,6 +83,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        z-index: 2;
 
         @media(--tablet) {
             display: block !Important;
@@ -112,6 +113,7 @@
         transform: rotate(180deg) translateY(-50%);
         left: 0;
         transform-origin: center top 0px;
+        z-index: 2;
     }
 
     .next {
