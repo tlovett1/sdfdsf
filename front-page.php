@@ -12,18 +12,17 @@ use ATU\Theme\Views;
 get_header()?>
 <?php if ( have_posts() ) : ?>
 	<main class="page-wrapper">
-		<div id="home" class="hero-wrapper">
+		<div id="home" class="hero-wrapper block">
 			<?php echo esc_html( get_template_part( 'partials/hero', 'hero' ) ); ?>
 		</div>
-
-		<div id="about" class="about-container">
+		<div id="about" class="about-container block">
 			<?php
 				echo get_template_part( 'partials/about', 'intro' );
 				echo get_template_part( 'partials/about', 'stats' );
 				echo get_template_part( 'partials/about', 'lists' );
 			?>
 		</div>
-		<div id="events" class="events-container">
+		<div id="events" class="events-container block">
 			<div class="section" data-aos="fade-up"  data-aos-duration="3000">
 				<div class="container">
 					<?php
@@ -47,7 +46,7 @@ get_header()?>
 			</div>
 		</div>
 
-		<div id="media" class="section media-section">
+		<div id="media" class="section media-section block">
 			<?php echo get_template_part( 'partials/media', 'media' ); ?>
 			<div class="container" data-aos="fade-up"  data-aos-duration="3000">
 				<?php
@@ -57,7 +56,7 @@ get_header()?>
 			</div>
 		</div>
 
-		<div id="contact" class="contact-section section">
+		<div id="contact" class="contact-section section block">
 			<div class="contact-container" data-aos="fade-up" data-aos-duration="4000">
 				<?php
 					echo get_template_part( 'partials/contact', 'intro' );

@@ -10,8 +10,7 @@ body {
     position:relative;
     font-family: var(--roboto);
 
-    &.video-modal-open,
-    &.modal-open {
+    &.video-modal-open {
         overflow: hidden;
 
         @media(--phone) {
@@ -19,6 +18,20 @@ body {
         }
     }
  }
+
+ .modal-open {
+    @media(--phone) {
+        .footer,
+        .site-header,
+        .contact-section,
+        .media-section,
+        .about-container,
+        .events-container,
+        .hero-wrapper {
+            display: none;
+        }
+    }
+}
 
  @media screen and (max-width: 782px) {
     html[lang='en-us'] {

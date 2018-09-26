@@ -56,6 +56,15 @@
     pointer-events: inherit;
     visibility: visible;
     height: 100vh;
+
+    @media(--phone) {
+        position: relative;
+        height: auto;
+
+        &:after {
+            display: none;
+        }
+    }
 }
 
 .modal-wrapper {
@@ -92,14 +101,17 @@
     .form & {
 
         @media(--phone) {
-            max-width: calc(100% - 40px);
+            max-width: 100%;
+            position: relative;
+            transform: none;
+            left: auto;
+            top: auto;
         }
     }
 }
 
 .modal-content-wrapper {
     width: 100%;
-
 
     .video & {
         margin-bottom: 0;
@@ -118,7 +130,10 @@
     }
 
     .form & {
-        margin-bottom: 200px;
+
+        @media(--tablet) {
+            margin-bottom: 200px;
+        }
     }
 }
 
@@ -198,5 +213,8 @@ select::-ms-expand {
 }
 
 .modal-open .form .modal-container {
-    margin-bottom: 200px;
+
+    @media(--tablet) {
+        margin-bottom: 200px;
+    }
 }

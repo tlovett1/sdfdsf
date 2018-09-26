@@ -13,6 +13,10 @@
     transition: all 0.3s, color 0.3s 0.3s, background-color 0.3s;
     position: relative;
 
+    &:focus {
+        outline: none;
+    }
+
     &:before {
         position: absolute;
         top: -1px;
@@ -28,7 +32,6 @@
         opacity: 0;
         z-index: -1;
     }
-
 
     &:hover {
         transition: all 0.3s, color 0.3s 0.3s;
