@@ -37,8 +37,7 @@
         height: 5px;
         background-color: var(--green);
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 6px;
         left: 0;
     }
  }
