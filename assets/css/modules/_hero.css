@@ -5,6 +5,7 @@
 .hero {
     text-align: center;
     background-color: var(--black);
+    height: 100%;
 
     .comparison-control {
         margin-top: 0;
@@ -69,7 +70,14 @@
     @media(--tablet) {
         min-height: 900px;
         height: 900px;
+        opacity: 0;
+        transition: opacity 0.25s;
+
+        &.comparison-widget {
+            opacity: 1;
+        }
     }
+
 }
 
 .hero-slide {
