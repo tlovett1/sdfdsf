@@ -137,6 +137,7 @@
     border-radius: 50%;
     border: 2px solid var(--green);
     cursor: pointer;
+    padding: 0 10px;
 
     @media(--tablet) {
         width: 70px;
