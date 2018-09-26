@@ -98,13 +98,13 @@
 }
 
 .social-icons {
-    margin-left: 26px;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 
     @media(--tablet) {
         margin-bottom: 0;
+        margin-left: 26px;
     }
 }
 
