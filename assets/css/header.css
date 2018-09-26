@@ -42,9 +42,12 @@
         background-color: var(--black);
         top: 0;
         left: 0;
-        opacity: 0.6;
         z-index: 1;
         transition: opacity 0.25s;
+
+        @media(--tablet) {
+            opacity: 0.6;
+        }
     }
 
     &.header-dark {
