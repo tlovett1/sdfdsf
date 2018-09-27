@@ -12,10 +12,6 @@ body {
 
     &.video-modal-open {
         overflow: hidden;
-
-        @media(--phone) {
-            position: fixed;
-        }
     }
  }
 

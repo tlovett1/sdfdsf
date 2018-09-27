@@ -14,14 +14,14 @@ export default () => {
       button.addEventListener('click', () => {
         body.classList.toggle('modal-open');
         const test = button.closest('.block');
-        id = test.id;
+        ({ id } = test);
         window.scrollTo(0, 0);
       });
     });
 
     close.addEventListener('click', () => {
       body.classList.remove('modal-open');
-      location.hash = id;
+      window.location.hash = id;
     });
   }
 

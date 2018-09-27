@@ -39,6 +39,10 @@
             top: calc(25% - 80px);
         }
     }
+
+    &.form {
+        background-color: #F2F2F2;
+    }
 }
 
 .video-modal-open .video {
@@ -58,7 +62,6 @@
 
     @media(--phone) {
         position: relative;
-        height: auto;
 
         &:after {
             display: none;
@@ -180,7 +183,9 @@
     }
 
     .form & {
-        border: none;
+        @media(--phone) {
+            border: none;
+        }
 
         svg {
             fill: var(--green);
