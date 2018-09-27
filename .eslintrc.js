@@ -13,6 +13,7 @@ module.exports = {
     ATU: true,
     window: true,
     wp: true,
+    location: true,
   },
   env: {
     jquery: true,

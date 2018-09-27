@@ -15,7 +15,6 @@ export default () => {
         body.classList.toggle('modal-open');
         const test = button.closest('.block');
         id = test.id;
-        console.log('id', id);
         window.scrollTo(0, 0);
       });
     });
