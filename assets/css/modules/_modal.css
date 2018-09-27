@@ -129,6 +129,10 @@
         max-width: 830px;
         margin: 0 auto;
         padding-top: 40px;
+
+        @media(--tablet) {
+            padding-top: 100px;
+        }
     }
 
     .form & {
