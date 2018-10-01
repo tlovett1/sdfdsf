@@ -2,7 +2,6 @@
     background-color: var(--backgroundGrey);
     padding: 20px;
 
-    
     @media(min-width: 770px) {
         justify-content: space-between;
         display: flex;
@@ -60,6 +59,7 @@
 
         &:hover {
             color: var(--white);
+            background-color: var(--green);
         }
     }
 }

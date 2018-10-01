@@ -41,7 +41,9 @@
     }
 
     &.form {
-        background-color: #F2F2F2;
+        @media(--phone) {
+            background-color: #F2F2F2;
+        }
     }
 }
 
